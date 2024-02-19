@@ -1,7 +1,13 @@
 import * as React from "react"
+import { useEffect, useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
+const [githubData, setGithubData] = useState([])
+const [githubUser, setGithubUser] = useState("trmchale1")
 
+const fetchData = () => {
+  return fetch(`https://api.github.com/users/${githubUser}`).then((response) => response.json());
+}
 
 // Improve the left side with background and bio
 // Improve the right side by connecting a live updating application with new blog posts and media

@@ -23,4 +23,6 @@
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #C0C0C0;
+    padding: 50px;
+    text-align: center;
 }
