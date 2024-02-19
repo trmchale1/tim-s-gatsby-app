@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.split-screen {
+    display: flex;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
