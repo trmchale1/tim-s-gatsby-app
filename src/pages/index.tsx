@@ -9,6 +9,8 @@ const fetchData = () => {
   return fetch(`https://api.github.com/users/${githubUser}`).then((response) => response.json());
 }
 
+//useEffect(fetchData, []);
+
 // Improve the left side with background and bio
 // Improve the right side by connecting a live updating application with new blog posts and media
 const IndexPage: React.FC<PageProps> = () => {
