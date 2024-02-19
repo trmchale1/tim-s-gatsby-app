@@ -1,6 +1,7 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
+import { Post } from "./post.tsx"
 
 const [githubData, setGithubData] = useState([])
 const [githubUser, setGithubUser] = useState("trmchale1")
@@ -9,13 +10,13 @@ const fetchData = () => {
   return fetch(`https://api.github.com/users/${githubUser}`).then((response) => response.json());
 }
 
-function Post({ post }) {
-  return (
-    <div>
-      <p>Blog post {post}</p>
-      </div>
-  );
-}
+//function Post({ post }) {
+//  return (
+//    <div>
+//      <p>Blog post {post}</p>
+//      </div>
+//  );
+//}
 
 //useEffect(fetchData, []);
 
