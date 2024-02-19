@@ -6,7 +6,17 @@
     display: flex;
 }
 
-.left-side,
+.left-side {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #36454F;
+    padding: 50px;
+    text-align: center;
+    color: #FFFFF0;
+}
+
 .right-side {
     flex: 1;
     height: 100vh;
