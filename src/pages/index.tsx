@@ -9,15 +9,20 @@ const fetchData = () => {
   return fetch(`https://api.github.com/users/${githubUser}`).then((response) => response.json());
 }
 
+function Post({ post }) {
+  return (
+    <div>
+      <p>Blog post {post}</p>
+      </div>
+  );
+}
+
 //useEffect(fetchData, []);
 
 // Improve the left side with background and bio
 // Improve the right side by connecting a live updating application with new blog posts and media
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    
-    
-    
     <div className="split-screen">
       <div className="left-side">
       <h1>Good Morning Tim</h1>
@@ -25,9 +30,11 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <p>What is going on over here?</p>
+        <Post post={1} />
+        <Post post={2} />
+        <Post post={10} />
       </div>
     </div>
-    
   )
 }
 
