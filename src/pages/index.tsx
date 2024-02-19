@@ -13,10 +13,13 @@ const headingStyles = {
 }
 
 
-
+// Improve the left side with background and bio
+// Improve the right side by connecting a live updating application with new blog posts and media
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
+    
+    
     <div className="split-screen">
       <div className="left-side">
       <h1 style={headingStyles}>
@@ -34,4 +37,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Tim's web app</title>
