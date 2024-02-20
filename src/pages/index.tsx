@@ -17,9 +17,8 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <p>What is going on over here?</p>
-        <Post post={1} />
-        <Post post={2} />
-        <Post post={10} />
+        <Post />
+        
       </div>
     </div>
   )
