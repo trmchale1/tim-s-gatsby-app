@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
-import { Gist } from "./gist"
 
 
 export function Post( ) {
@@ -25,8 +24,7 @@ export function Post( ) {
     //// having trouble rendering the md data from getUserData(), need to learn about props/state other react stuff
     //
     //const data = getUserData();
-    //console.log(data)
-    
+    //console.log(data
 
     return (
       <div>

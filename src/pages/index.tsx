@@ -9,6 +9,8 @@ import { Post } from "./post.tsx"
 // Improve the left side with background and bio
 // Improve the right side by connecting a live updating application with new blog posts and media
 const IndexPage: React.FC<PageProps> = () => {
+
+  
   return (
     <div className="split-screen">
       <div className="left-side">
