@@ -13,8 +13,10 @@
     border: 1px solid #ccc;
     background-color: #36454F;
     padding: 50px;
-    text-align: center;
+    text-align: middle;
     color: #FFFFF0;
+    font-family: Montserrat;
+    font-size: 36;
 }
 
 .right-side {
@@ -26,3 +28,11 @@
     padding: 50px;
     text-align: center;
 }
+
+.avatar {
+    text-align: center;
+    vertical-align: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }

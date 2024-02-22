@@ -27,7 +27,7 @@ def convert_raw_gist_to_data_struct(object, filename):
     dict_gists_super["avatar"] = object["owner"]["avatar_url"]
     gist_url = object["files"][filename]["raw_url"]      
     get_gist_contents = requests.get(gist_url)      
-    dict_gists_sub.append(dict({"filename" : filename, "description" : object["description"],"content" : get_gist_contents.text}))
+    dict_gists_sub.append(dict({"filename" : filename, "description" : object["description"],"content" : get_gist_contents.text, "link" : object["html_url"]}))
     dict_gists_super[filename] = dict_gists_sub
 
 

