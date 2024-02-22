@@ -15,8 +15,8 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <div className="split-screen">
       <div className="left-side">
-      <h1>Tim McHale</h1>
-        <Avatar avatar = {data["avatar"]}/>
+      <Avatar avatar = {data["avatar"]}/>
+      <div className="my-name">Tim McHale</div>
       </div>
       
       <div className="right-side">

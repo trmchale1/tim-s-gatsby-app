@@ -9,14 +9,16 @@
 .left-side {
     flex: 1;
     height: 100vh;
-    overflow: hidden;
     border: 1px solid #ccc;
     background-color: #36454F;
     padding: 50px;
+}
+
+.my-name {
+    font-family: Montserrat;
+    font-size: 54;
     text-align: middle;
     color: #FFFFF0;
-    font-family: Montserrat;
-    font-size: 36;
 }
 
 .right-side {
