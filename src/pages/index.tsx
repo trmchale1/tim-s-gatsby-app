@@ -1,16 +1,15 @@
 import * as React from "react"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Post } from "./post.tsx"
+import data from "./data.json"
 
-
-//useEffect(fetchData, []);
+const [gist] = useState(data)
 
 // Improve the left side with background and bio
 // Improve the right side by connecting a live updating application with new blog posts and media
 const IndexPage: React.FC<PageProps> = () => {
-
-  
+  console.log(gist)
   return (
     <div className="split-screen">
       <div className="left-side">
