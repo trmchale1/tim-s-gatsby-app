@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://api.github.com/gists/4088356e12bd482146a1afadbe99c4e0",
+    "forks_url": "https://api.github.com/gists/4088356e12bd482146a1afadbe99c4e0/forks",
+    "commits_url": "https://api.github.com/gists/4088356e12bd482146a1afadbe99c4e0/commits",
+    "id": "4088356e12bd482146a1afadbe99c4e0",
+    "node_id": "G_kwDOAF1ss9oAIDQwODgzNTZlMTJiZDQ4MjE0NmExYWZhZGJlOTljNGUw",
+    "git_pull_url": "https://gist.github.com/4088356e12bd482146a1afadbe99c4e0.git",
+    "git_push_url": "https://gist.github.com/4088356e12bd482146a1afadbe99c4e0.git",
+    "html_url": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0",
+    "files": {
+      "Fallout.md": {
+        "filename": "Fallout.md",
+        "type": "text/markdown",
+        "language": "Markdown",
+        "raw_url": "https://gist.githubusercontent.com/trmchale1/4088356e12bd482146a1afadbe99c4e0/raw/c9c23b00305c695c92246bc49e22e0c7afd7c4d9/Fallout.md",
+        "size": 155
+      },
+      "Fallout.sol": {
+        "filename": "Fallout.sol",
+        "type": "text/plain",
+        "language": "Solidity",
+        "raw_url": "https://gist.githubusercontent.com/trmchale1/4088356e12bd482146a1afadbe99c4e0/raw/24f875e437763fcd91acd1dc2ff16104d808d25f/Fallout.sol",
+        "size": 998
+      }
+    },
+    "public": true,
+    "created_at": "2024-02-21T16:33:32Z",
+    "updated_at": "2024-02-22T01:59:07Z",
+    "description": "Smart Contract Audit Ethernaut: Fallout",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/4088356e12bd482146a1afadbe99c4e0/comments",
+    "owner": {
+      "login": "trmchale1",
+      "id": 6122675,
+      "node_id": "MDQ6VXNlcjYxMjI2NzU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6122675?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/trmchale1",
+      "html_url": "https://github.com/trmchale1",
+      "followers_url": "https://api.github.com/users/trmchale1/followers",
+      "following_url": "https://api.github.com/users/trmchale1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/trmchale1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/trmchale1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/trmchale1/subscriptions",
+      "organizations_url": "https://api.github.com/users/trmchale1/orgs",
+      "repos_url": "https://api.github.com/users/trmchale1/repos",
+      "events_url": "https://api.github.com/users/trmchale1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/trmchale1/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  },
+  {
+    "url": "https://api.github.com/gists/95b69f2fae637f6511b9818aa007d5b0",
+    "forks_url": "https://api.github.com/gists/95b69f2fae637f6511b9818aa007d5b0/forks",
+    "commits_url": "https://api.github.com/gists/95b69f2fae637f6511b9818aa007d5b0/commits",
+    "id": "95b69f2fae637f6511b9818aa007d5b0",
+    "node_id": "G_kwDOAF1ss9oAIDk1YjY5ZjJmYWU2MzdmNjUxMWI5ODE4YWEwMDdkNWIw",
+    "git_pull_url": "https://gist.github.com/95b69f2fae637f6511b9818aa007d5b0.git",
+    "git_push_url": "https://gist.github.com/95b69f2fae637f6511b9818aa007d5b0.git",
+    "html_url": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
+    "files": {
+      "Fallback.sol": {
+        "filename": "Fallback.sol",
+        "type": "text/plain",
+        "language": "Solidity",
+        "raw_url": "https://gist.githubusercontent.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0/raw/8c5cc076bcedd9eb0613d09611eb051062813b07/Fallback.sol",
+        "size": 928
+      },
+      "fallback.md": {
+        "filename": "fallback.md",
+        "type": "text/markdown",
+        "language": "Markdown",
+        "raw_url": "https://gist.githubusercontent.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0/raw/932fe03455de1bcb4f6cd33d843e2d3755fc03a3/fallback.md",
+        "size": 705
+      }
+    },
+    "public": true,
+    "created_at": "2024-02-20T01:27:08Z",
+    "updated_at": "2024-02-20T02:32:05Z",
+    "description": "Smart Contract Audit Ethernaut: Fallback",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/95b69f2fae637f6511b9818aa007d5b0/comments",
+    "owner": {
+      "login": "trmchale1",
+      "id": 6122675,
+      "node_id": "MDQ6VXNlcjYxMjI2NzU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6122675?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/trmchale1",
+      "html_url": "https://github.com/trmchale1",
+      "followers_url": "https://api.github.com/users/trmchale1/followers",
+      "following_url": "https://api.github.com/users/trmchale1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/trmchale1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/trmchale1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/trmchale1/subscriptions",
+      "organizations_url": "https://api.github.com/users/trmchale1/orgs",
+      "repos_url": "https://api.github.com/users/trmchale1/repos",
+      "events_url": "https://api.github.com/users/trmchale1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/trmchale1/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  }
+]
