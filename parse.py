@@ -1,7 +1,6 @@
 import json 
 import requests
 
-
 list_of_gist_links = []
 dict_gists_super = {}
 
@@ -24,19 +23,13 @@ def print_dict_to_json():
         outfile.write(json_obj)
         
 def convert_raw_gist_to_data_struct(object, filename):
-    content = []
-    dict_gists_sub = {}
+    dict_gists_sub = []
     dict_gists_super["avatar"] = object["owner"]["avatar_url"]
     gist_url = object["files"][filename]["raw_url"]      
     get_gist_contents = requests.get(gist_url)      
-    content.append(get_gist_contents.text)
-    dict_gists_sub[filename] = content
-    dict_gists_super.update(dict_gists_sub)
-    
+    dict_gists_sub.append(dict({"filename" : filename, "description" : object["description"],"content" : get_gist_contents.text}))
+    dict_gists_super[filename] = dict_gists_sub
+
 
 read_json_into_dict()    
 print_dict_to_json()
-        
-        
-    
-    
