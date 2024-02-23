@@ -9,16 +9,10 @@
 .left-side {
     flex: 1;
     height: 100vh;
+    overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #36454F;
+    background-color: #342E37;
     padding: 50px;
-}
-
-.my-name {
-    font-family: Montserrat;
-    font-size: 54;
-    text-align: middle;
-    color: #FFFFF0;
 }
 
 .right-side {
@@ -26,15 +20,52 @@
     height: 100vh;
     overflow: hidden;
     border: 1px solid #ccc;
-    background-color: #C0C0C0;
+    background-color: #000000;
     padding: 50px;
     text-align: center;
 }
 
 .avatar {
-    text-align: center;
-    vertical-align: center;
-    width: 200px;
-    height: 200px;
+    text-align: left;
+    vertical-align: left;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+  }
+
+  .my-name {
+    text-align: center;
+    text-align: middle;
+    color: #FFFFF0;
+    font-family: Optima;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .about-me {
+    text-align: left;
+    font-family: Optima; 
+    color: #FFFFF0;
+    font-size: 2.0rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .my-text {
+    text-align: left;
+    font-family: Optima; 
+    color: #FFFFF0;
+    font-size: 1.0rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .my-subject {
+    text-align: left;
+    font-family: Optima; 
+    color: #FFFFF0;
+    font-size: 1.50rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
   }
