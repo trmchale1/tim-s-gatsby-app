@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Post } from "./post.tsx"
 import data from "./data.json"
@@ -7,11 +7,11 @@ import { Avatar } from "./avatar.tsx"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const [gist, getGist] = useState(data)
 
 // right side add scolling feature
 // add a new repo, add features like repos, commits 
 const IndexPage: React.FC<PageProps> = () => {
+
   console.log(data)
 
   return (
@@ -37,12 +37,9 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        
-        
         <Post description = {data["Fallout.md"][0]["description"]} content = {data["Fallout.md"][0]["content"]} link = {data["Fallout.md"][0]["link"]}/>
         
         <Post description = {data["fallback.md"][0]["description"]} content = {data["fallback.md"][0]["content"]} link = {data["fallback.md"][0]["link"]} />
-        
         </div>
       </div>
   )
