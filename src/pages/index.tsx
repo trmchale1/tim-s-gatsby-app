@@ -7,7 +7,12 @@ import { Avatar } from "./avatar.tsx"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
 
+// before implementing the scrolling feature, create a new branch and change the data structure to be a list of JSON objects
+// give the avatar it's own json file, move assets into their own folders
+// delete the filenames as the key
+// add this repo in a curl and add good data for posts
 
+// perhaps gists and repos should get their own json files as well
 // right side add scolling feature
 // add a new repo, add features like repos, commits 
 const IndexPage: React.FC<PageProps> = () => {
