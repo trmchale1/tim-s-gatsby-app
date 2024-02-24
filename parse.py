@@ -21,12 +21,7 @@ def print_dict_to_json(py_dict, filename):
         
 def modify_gist_json(gist):
     gist_dict = {}
-    api_url = gist["url"]
-    html_url = gist["html_url"]
-    created_at = gist["created_at"]
-    description = gist["description"]
-    files = gist["files"]
-    gist_dict = dict({"api_url" : api_url, "html_url" : html_url, "created_at" : created_at, "description" : description, "files" : files})
+    gist_dict = dict({"api_url" : gist["url"], "html_url" : gist["html_url"], "created_at" : gist["created_at"], "description" : gist["description"], "files" : gist["files"]})
     appended_gists.append(gist_dict)
 
 
