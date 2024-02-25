@@ -2,28 +2,36 @@ import * as React from "react"
 import { useState, useEffect, useRef } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Post } from "./post.tsx"
-import data from "./data.json"
 import { Avatar } from "./avatar.tsx"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-// before implementing the scrolling feature, create a new branch and change the data structure to be a list of JSON objects
-// give the avatar it's own json file, move assets into their own folders
-// delete the filenames as the key
-// add this repo in a curl and add good data for posts
 
-// perhaps gists and repos should get their own json files as well
+// ****** New Branch new-data-w-scroll
+
+// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests?
+// keep the content feature from the gists? If so, needs a function that requests the content from the url.
 // right side add scolling feature
-// add a new repo, add features like repos, commits 
-const IndexPage: React.FC<PageProps> = () => {
 
-  console.log(data)
+const IndexPage: React.FC<PageProps> = () => {
+  const [items, setItems] = useState([]);
+  const [hasMore, setHasMore] = useState(true);
+  const [index, setIndex] = useState(2);
+
+  useEffect(() => {
+    const getDataFromGists = async() => {
+      setIsLoading(true);
+      setError(null);
+      const json = await fetch("public/page-data/index/gists.json").then(r => r.json())
+      console.log(json)
+    }
+  }, []);
+
 
   return (
     <div className="split-screen">
       <div className="left-side">
       <div className="my-name"><p>Tim McHale</p></div>
-      <Avatar avatar = {data["avatar"]}/>
       <div className="about-me">
         <br></br>
         <br></br>
@@ -42,9 +50,7 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        <Post description = {data["Fallout.md"][0]["description"]} content = {data["Fallout.md"][0]["content"]} link = {data["Fallout.md"][0]["link"]}/>
         
-        <Post description = {data["fallback.md"][0]["description"]} content = {data["fallback.md"][0]["content"]} link = {data["fallback.md"][0]["link"]} />
         </div>
       </div>
   )

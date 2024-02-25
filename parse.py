@@ -31,5 +31,8 @@ def get_avatar(json):
     print_dict_to_json(avatar_json, 'src/json/avatar.json')    
     
     
+# get_content_from_gist_files() ?
+    
+    
 read_json_into_dict()    
 print_dict_to_json(appended_gists, "src/json/gists.json")
