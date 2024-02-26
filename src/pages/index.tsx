@@ -8,25 +8,29 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import Gists from "./gists.json"
 
 
-// ****** New Branch new-data-w-scroll
+// ****** New Branch new-data-w-scroll => PR as we're stable
 
-// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests?
-// keep the content feature from the gists? If so, needs a function that requests the content from the url.
+// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests? => implement new data
+// keep the content feature from the gists? If so, needs a function that requests the content from the url. => add content
 // right side add scolling feature
+
+const htmlToGist = (link) => {
+  window.location.href = link;
+ 
+}
 
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-
+  
     const getDataFromGists = async() => {
       setIsLoading(true);
       setError(null);
-      
       try {
-        
         setItems(prevItems => [...prevItems, ...Gists]);
+
         } catch (error) {
           setError(error);
         } finally {
@@ -69,7 +73,12 @@ const IndexPage: React.FC<PageProps> = () => {
           endMessage={<p>No more data to load.</p>}
         ><ul>
         {items.map(item => (
+          <>
           <li>{item.description}</li>
+          <li>{item.created_at}</li>
+          <li>{item.description}</li>
+          <button onClick={event => htmlToGist(item.html_url)}>Click this button</button>
+          </>
         ))}
       </ul></InfiniteScroll>
         </div>
