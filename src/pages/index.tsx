@@ -4,14 +4,17 @@ import type { HeadFC, PageProps } from "gatsby"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Gists from "./gists.json"
-
+import { Avatar } from "./avatar.tsx";
+import AvatarData from "./avatar.json"
 
 // ****** New Branch map-inner-object-and-render
 
 // how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests? => implement new data for repo
-// keep the content feature from the gists? If so, needs a function that requests the content from the url. => add content
+// => add content => update, how to render in Markdown
 // right side add scolling feature
 // small github icon for github gist link
+// change the font of everything but the description
+
 
 const htmlToGist = (link) => {
   window.location.href = link;
@@ -45,6 +48,12 @@ const IndexPage: React.FC<PageProps> = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
+    return formattedDate;
+  };
+
   useEffect(() => {
     getDataFromGists(setItems);
   }, []);
@@ -52,6 +61,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <div className="split-screen">
       <div className="left-side">
+      <Avatar avatar={AvatarData} />
       <div className="my-name"><p>Tim McHale</p></div>
       <div className="about-me">
         <br></br>
@@ -71,7 +81,7 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        <div className="my-subject">
+        <div className="my-text">
         <InfiniteScroll
         dataLength={items.length}
         next={getDataFromGists}
@@ -83,8 +93,8 @@ const IndexPage: React.FC<PageProps> = () => {
           {items.map(item => (
             <li key={item.key}>
               <ul>
-                <li>{item.created_at}</li>
-                <li>{item.description}</li>
+                <li>{formatDate(item.created_at)}</li>
+                <li className="my-subject">{item.description}</li>
                 
               </ul>
               <br />
@@ -95,9 +105,10 @@ const IndexPage: React.FC<PageProps> = () => {
               </ul>
               <br />
               <button onClick={event => htmlToGist(item.html_url)}>Check out this gist on github</button>
-              <br />
+              
             </li>
           ))}
+          <br />
         </ul>
       </InfiniteScroll>
       </div>
