@@ -2,23 +2,46 @@ import * as React from "react"
 import { useState, useEffect, useRef } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { Post } from "./post.tsx"
-import data from "./data.json"
 import { Avatar } from "./avatar.tsx"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Gists from "./gists.json"
 
 
+// ****** New Branch new-data-w-scroll
+
+// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests?
+// keep the content feature from the gists? If so, needs a function that requests the content from the url.
 // right side add scolling feature
-// add a new repo, add features like repos, commits 
-const IndexPage: React.FC<PageProps> = () => {
 
-  console.log(data)
+const IndexPage: React.FC<PageProps> = () => {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
+
+    const getDataFromGists = async() => {
+      setIsLoading(true);
+      setError(null);
+      
+      try {
+        
+        setItems(prevItems => [...prevItems, ...Gists]);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setIsLoading(false);
+        }
+    }
+    
+    useEffect(() => {
+      getDataFromGists();
+    }, []);
 
   return (
     <div className="split-screen">
       <div className="left-side">
       <div className="my-name"><p>Tim McHale</p></div>
-      <Avatar avatar = {data["avatar"]}/>
       <div className="about-me">
         <br></br>
         <br></br>
@@ -37,9 +60,20 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        <Post description = {data["Fallout.md"][0]["description"]} content = {data["Fallout.md"][0]["content"]} link = {data["Fallout.md"][0]["link"]}/>
-        
-        <Post description = {data["fallback.md"][0]["description"]} content = {data["fallback.md"][0]["content"]} link = {data["fallback.md"][0]["link"]} />
+        <div className="my-subject">
+        <InfiniteScroll
+          dataLength={items.length}
+          next={getDataFromGists}
+          hasMore={true} // Replace with a condition based on your data source
+          loader={<p>Loading...</p>}
+          endMessage={<p>No more data to load.</p>}
+        ><ul>
+        {items.map(item => (
+          <li>{item.description}</li>
+        ))}
+      </ul></InfiniteScroll>
+        </div>
+);
         </div>
       </div>
   )
