@@ -5,6 +5,7 @@ import { Post } from "./post.tsx"
 import { Avatar } from "./avatar.tsx"
 import PDF from "./resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Gists from "./gists.json"
 
 
 // ****** New Branch new-data-w-scroll
@@ -15,18 +16,27 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
-  const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(2);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [page, setPage] = useState(1);
 
-  useEffect(() => {
     const getDataFromGists = async() => {
       setIsLoading(true);
       setError(null);
-      const json = await fetch("public/page-data/index/gists.json").then(r => r.json())
-      console.log(json)
+      
+      try {
+        
+        setItems(prevItems => [...prevItems, ...Gists]);
+        } catch (error) {
+          setError(error);
+        } finally {
+          setIsLoading(false);
+        }
     }
-  }, []);
-
+    
+    useEffect(() => {
+      getDataFromGists();
+    }, []);
 
   return (
     <div className="split-screen">
@@ -50,7 +60,20 @@ const IndexPage: React.FC<PageProps> = () => {
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        
+        <div className="my-subject">
+        <InfiniteScroll
+          dataLength={items.length}
+          next={getDataFromGists}
+          hasMore={true} // Replace with a condition based on your data source
+          loader={<p>Loading...</p>}
+          endMessage={<p>No more data to load.</p>}
+        ><ul>
+        {items.map(item => (
+          <li>{item.description}</li>
+        ))}
+      </ul></InfiniteScroll>
+        </div>
+);
         </div>
       </div>
   )
