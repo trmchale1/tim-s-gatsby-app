@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useEffect, useState } from "react"
-import AvatarData from "./json/avatar.json"
+import AvatarData from "../json/avatar.json"
 
 
 export function Avatar({ avatar }) {
