@@ -1,90 +1,54 @@
 import * as React from "react"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { Post } from "./post.tsx"
-import { Avatar } from "./avatar.tsx"
-import PDF from "./resume1.pdf"
+import PDF from "../images/resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Gists from "./gists.json"
+import Gists from "../json/gists.json"
+import { Avatar } from "../components/avatar";
+import AvatarData from "../json/avatar.json"
+import InfiniteScrollList from "../components/InfiniteScrollComponent.tsx";
+import * as helpers from '../utils/helpers.ts';
 
+// ****** New Branch map-inner-object-and-render
 
-// ****** New Branch new-data-w-scroll => PR as we're stable
-
-// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests? => implement new data
-// keep the content feature from the gists? If so, needs a function that requests the content from the url. => add content
+// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests? => implement new data for repo
 // right side add scolling feature
-
-const htmlToGist = (link) => {
-  window.location.href = link;
- 
-}
+// small github icon for github gist link
 
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [page, setPage] = useState(1);
-  
-    const getDataFromGists = async() => {
-      setIsLoading(true);
-      setError(null);
-      try {
-        setItems(prevItems => [...prevItems, ...Gists]);
 
-        } catch (error) {
-          setError(error);
-        } finally {
-          setIsLoading(false);
-        }
-    }
-    
-    useEffect(() => {
-      getDataFromGists();
-    }, []);
+  useEffect(() => {
+    helpers.getDataFromGists(setItems);
+  }, []);
 
   return (
     <div className="split-screen">
       <div className="left-side">
+      <Avatar avatar={AvatarData} />
       <div className="my-name"><p>Tim McHale</p></div>
       <div className="about-me">
         <br></br>
         <br></br>
         <p>Currently living that indie dev lifestyle.</p>
         <br></br>
-        <br></br>
         <p>Code should be concise, while changes in state should have simple, clear workflows.</p>
-        <br></br>
         <br></br>
         <p>Check out what I'm doing on <a href="https://twitter.com/mctim123">twitter</a></p>        
         <br></br>
-        <br></br>
-        <p>Copy of my <a href={PDF} target="blank">Resume</a></p>
+        <p> <a href={PDF} target="blank">Copy of my resume</a></p>
         </div>
       </div>
       
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
-        <div className="my-subject">
-        <InfiniteScroll
-          dataLength={items.length}
-          next={getDataFromGists}
-          hasMore={true} // Replace with a condition based on your data source
-          loader={<p>Loading...</p>}
-          endMessage={<p>No more data to load.</p>}
-        ><ul>
-        {items.map(item => (
-          <>
-          <li>{item.description}</li>
-          <li>{item.created_at}</li>
-          <li>{item.description}</li>
-          <button onClick={event => htmlToGist(item.html_url)}>Click this button</button>
-          </>
-        ))}
-      </ul></InfiniteScroll>
+        <br />
+        <div className="my-text">
+          <InfiniteScrollList items={items} getDataFromGists={helpers.getDataFromGists} />
         </div>
-);
-        </div>
+        
       </div>
+    </div>
   )
 }
 
