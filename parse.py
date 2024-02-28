@@ -34,7 +34,6 @@ def modify_gist_json(gist):
     
 def modify_repo_json(repo_obj):
     repo_dict = dict({"before": repo_obj["before"], "after": repo_obj["after"], "ref": repo_obj["ref"],"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"]})
-    print(repo_dict)
     repo_activity.append(repo_dict)
 
 def get_avatar(json):
