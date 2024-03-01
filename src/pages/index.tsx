@@ -9,11 +9,17 @@ import AvatarData from "../json/avatar.json"
 import InfiniteScrollList from "../components/InfiniteScrollComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
 
-// ****** New Branch map-inner-object-and-render
 
-// how should we implemet data in GatsbyActivity.json, commits are a little verbose, perhaps pull requests? => implement new data for repo
-// right side add scolling feature
-// small github icon for github gist link
+// ****** New Branch frontend-styling-1
+// can we imporve the button pointing to github, wrap it in a margin
+// can we wrap each gist in a bubble or a margin
+// change the content of the gist to something laid out in a codeblock, dark with correct syntax formatting
+
+
+// ****** New Branch add-repo-commit-history
+// You have the json to complete the challenge below, you should be able to report the activity of a repo with the below code
+// This link with the hash from GatsbyActivity.json will return "html_url", which will show the code of each commit "git_commits_url": "https://api.github.com/repos/trmchale1/tim-s-gatsby-app/git/commits{/sha}",
+
 
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
