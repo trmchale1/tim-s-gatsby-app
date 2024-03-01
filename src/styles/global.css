@@ -69,3 +69,12 @@
     font-weight: 600;
     letter-spacing: 0.1em;
   }
+
+  .button {
+    background-color: #24292e; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: medium; 
+    border-radius: 10px; 
+    cursor: pointer;
+  }

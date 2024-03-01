@@ -26,7 +26,12 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
           ))}
         </ul>
         <br />
-        <button onClick={event => helpers.htmlToGist(item.html_url)}>Check out this gist on github</button>
+        <button className="button" onClick={event => helpers.htmlToGist(item.html_url)}>
+          <span>Check out this gist on GitHub</span>
+    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="30" height="30" />
+    </a>
+</button>
         
       </li>
     ))}
