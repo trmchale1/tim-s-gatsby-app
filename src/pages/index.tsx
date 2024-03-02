@@ -13,12 +13,17 @@ import * as helpers from '../utils/helpers.ts';
 
 // You have the json to complete the challenge below, you should be able to report the activity of a repo with the below code
 // This link with the hash from GatsbyActivity.json will return "html_url", which will show the code of each commit "git_commits_url": "https://api.github.com/repos/trmchale1/tim-s-gatsby-app/git/commits{/sha}",
-// can we imporve the button pointing to github, wrap it in a margin
-// can we wrap each gist in a bubble or a margin
-// change the content of the gist to something laid out in a codeblock, dark with correct syntax formatting
 
+// we need a data model where gists and repo activity are combined
+// gists contain a created at, description, and content
+// before after commits, ref includes branch, timestamp, activity type
+// each object could include a timestamp, 
+// if gist - description is subject, content is unique
+// if activity - after, branch from ref, and activity type
+// objects sorted by timestamp
+// if statements in the html to add different stylings for gists and repo activity
 
-
+// timestamp is our new key
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
 
