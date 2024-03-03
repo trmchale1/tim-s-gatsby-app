@@ -1,11 +1,12 @@
 // utils/helpers.ts
-import Gists from "../json/gists.json"
+import Gists from "../json/repo_activity.json";
 
 export const htmlToGist = (link) => {
-    window.location.href = link;
-  };
-  
-  export const fetchDataForItem = async (item) => {
+  window.location.href = link;
+};
+
+export const fetchDataForItem = async (item) => {
+  if (item.files && Array.isArray(item.files)) {
     const files = await Promise.all(
       item.files.map(async (file) => {
         if (file.filename.endsWith(".md")) {
@@ -16,19 +17,29 @@ export const htmlToGist = (link) => {
         return null;
       })
     );
-    return { ...item, files:files.filter(Boolean) };
-  };
-  
-  export const formatDate = (dateString) => {
+    return { ...item, files: files.filter(Boolean) };
+  } else {
+    // If 'item.files' is undefined or not an array, return the item as is
+    return item;
+  }
+};
+
+export const formatDate = (dateString) => {
+  try {
     const options = { year: "numeric", month: "long", day: "numeric" };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-  
-  export const getDataFromGists = async (setItems) => {
-    try {
-      const newItems = await Promise.all(Gists.map(fetchDataForItem));
-      setItems((prevItems) => [...prevItems, ...newItems]);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
+  } catch (error) {
+    console.error("Error parsing date:", error);
+    return "Invalid Date";
+  }
+};
+
+export const getDataFromGists = async (setItems) => {
+  try {
+    const newItems = await Promise.all(Gists.map(fetchDataForItem));
+    setItems((prevItems) => [...prevItems, ...newItems]);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
