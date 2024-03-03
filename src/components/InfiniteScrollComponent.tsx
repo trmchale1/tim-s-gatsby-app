@@ -5,11 +5,11 @@ import MarkdownComponent from "./markdownComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
 
 const InfiniteScrollList = ({ items, getDataFromGists }) => {
+
   // Check if 'items' is defined and an array before mapping over it
   if (!items || !Array.isArray(items)) {
     return null;  // or handle it in a way that makes sense for your application
   }
-
   return (
     <InfiniteScroll
       dataLength={items.length}
@@ -19,6 +19,7 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
       endMessage={<p>No more data to load.</p>}
     >
       <ul>
+
         {items.map((item) => (
           <li key={item.key}>
             <ul>
@@ -45,6 +46,7 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
               </a>
             </button>
             </ul>
+
           </li>
         ))}
         <br />

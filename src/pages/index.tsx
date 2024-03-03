@@ -9,21 +9,8 @@ import AvatarData from "../json/avatar.json"
 import InfiniteScrollList from "../components/InfiniteScrollComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
 
-// ****** New Branch add-repo-commit-history
 
-// You have the json to complete the challenge below, you should be able to report the activity of a repo with the below code
-// This link with the hash from GatsbyActivity.json will return "html_url", which will show the code of each commit "git_commits_url": "https://api.github.com/repos/trmchale1/tim-s-gatsby-app/git/commits{/sha}",
 
-// we need a data model where gists and repo activity are combined
-// gists contain a created at, description, and content
-// before after commits, ref includes branch, timestamp, activity type
-// each object could include a timestamp, 
-// if gist - description is subject, content is unique
-// if activity - after, branch from ref, and activity type
-// objects sorted by timestamp
-// if statements in the html to add different stylings for gists and repo activity
-
-// timestamp is our new key
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
 
@@ -52,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <div className="right-side">
         <div className="my-name"><p>What I'm doing</p></div>
         <br />
-        <div className="my-text">
+        <div>
           <InfiniteScrollList items={items} getDataFromGists={helpers.getDataFromGists} />
         </div>
         

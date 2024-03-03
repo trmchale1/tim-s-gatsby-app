@@ -9,20 +9,19 @@
 .left-side {
     flex: 1;
     height: 100vh;
-    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
     border: 1px solid #ccc;
     background-color: #342E37;
     padding: 50px;
 }
 
 .right-side {
-    flex: 1;
-    height: 100vh;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #000000;
-    padding: 50px;
-    text-align: center;
+  flex: 1;
+  height: 100vh;
+  overflow: auto;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  padding: 10px 20px;
 }
 
 .avatar {
@@ -53,12 +52,13 @@
   }
 
   .my-text {
-    text-align: left;
+    text-align: justify;
     font-family: Optima; 
     color: #FFFFF0;
     font-size: 1.0rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
+    box-sizing: border-box;
   }
 
   .my-subject {
@@ -68,4 +68,33 @@
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.1em;
+  }
+
+  .button {
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: medium;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left; /* Align button text to the left */
+    vertical-align: left;
+    margin-bottom: 10px;
+  }
+
+  .code_block {
+    box-sizing: border-box;
+    text-align: justify;
+    background-color: #2d2d2d;
+    color: #fffff0;
+    font-size: 1.0rem;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    border-radius: 10px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: medium;
+    font-family: Optima;
+    margin-top: 10px; 
+    overflow-x: auto;
+    overflow-wrap: break-word;
   }
