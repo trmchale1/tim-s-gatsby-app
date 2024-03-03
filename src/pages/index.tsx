@@ -10,7 +10,6 @@ import InfiniteScrollList from "../components/InfiniteScrollComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
 
 
-
 const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
 
