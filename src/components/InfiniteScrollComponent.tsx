@@ -37,8 +37,9 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
             <br />
             <ul>
             {item.activity_type || 'commit'} was made to {item.branch || 'main'}
+            <br />
             <button onClick={(event) => helpers.htmlToGist(item.html_url)}>
-              Check out this commit on github
+              Check it out on Github
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                 <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="50" height="50" />
               </a>
