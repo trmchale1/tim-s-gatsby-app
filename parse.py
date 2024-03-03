@@ -5,6 +5,9 @@ list_of_gist_links = []
 dict_gists_super = {}
 appended_gists = []
 repo_activity = []
+global count
+count = 0
+
 
 def read_gists_into_dict():
     with open('myGists.json') as file:
@@ -26,25 +29,46 @@ def print_dict_to_json(py_dict, filename):
     with open(filename, "w") as outfile:
         outfile.write(json_obj)
 
-        
+# How do I get content here        
 def modify_gist_json(gist):    
-    gist_dict = dict({"api_url" : gist["url"], "html_url" : gist["html_url"], "created_at" : gist["created_at"], "description" : gist["description"], "files" : gist["files"]})
-    appended_gists.append(gist_dict)
+    global count
+    raw_url = ""
+    for filename in gist["files"]:
+        if filename.endswith(".md"):
+            raw_url = gist["files"][filename]["raw_url"]
+    response = requests.get(raw_url)
+    gist_dict = dict({"key": count, "html_url" : gist["html_url"], "timestamp" : gist["created_at"], "description" : gist["description"], "content" : response.text})
+    count = count + 1
+    repo_activity.append(gist_dict)
     
-    
+
 def modify_repo_json(repo_obj):
-    repo_dict = dict({"before": repo_obj["before"], "after": repo_obj["after"], "ref": repo_obj["ref"],"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"]})
+    global count
+    html_link = "https://github.com/trmchale1/tim-s-gatsby-app/commit/" + repo_obj["after"]
+    ref_parts = repo_obj["ref"].split('/')
+    branch = ref_parts[-1]
+    repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"]})
+    count = count + 1
     repo_activity.append(repo_dict)
 
 def get_avatar(json):
     avatar_json = {}
     avatar_json["avatar"] = json["owner"]["avatar_url"]
-    print_dict_to_json(avatar_json, 'src/json/avatar.json')    
+    print_dict_to_json(avatar_json, 'src/json/avatar.json')
     
+def sort_json(filename):
+    with open(filename, 'r') as unsorted_file:
+        unsorted_data = json.load(unsorted_file)
 
+    sorted_data = sorted(unsorted_data, key=lambda x: x.get('timestamp', ''))
+
+    with open(filename, 'w') as sorted_file:
+        json.dump(sorted_data, sorted_file, indent=2)
+        
+    
 read_gists_into_dict()    
 read_repo_activity_to_dict()
-print_dict_to_json(appended_gists, "src/json/gists.json")
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
-
+print_dict_to_json(repo_activity, "src/json/repo_activity.json")
+sort_json("src/json/repo_activity.json")
 # Unfortunetly after you run this, you have to add key = 3, for each gist, also delete the filename and turn into a list of dicts
