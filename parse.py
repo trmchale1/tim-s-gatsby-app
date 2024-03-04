@@ -37,7 +37,7 @@ def modify_gist_json(gist):
         if filename.endswith(".md"):
             raw_url = gist["files"][filename]["raw_url"]
     response = requests.get(raw_url)
-    gist_dict = dict({"key": count, "html_url" : gist["html_url"], "timestamp" : gist["created_at"], "description" : gist["description"], "content" : response.text})
+    gist_dict = dict({"key": count, "html_link" : gist["html_url"], "timestamp" : gist["created_at"], "description" : gist["description"], "content" : response.text})
     count = count + 1
     repo_activity.append(gist_dict)
     
@@ -47,7 +47,7 @@ def modify_repo_json(repo_obj):
     html_link = "https://github.com/trmchale1/tim-s-gatsby-app/commit/" + repo_obj["after"]
     ref_parts = repo_obj["ref"].split('/')
     branch = ref_parts[-1]
-    repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"]})
+    repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "tim-s-gatsby-app"})
     count = count + 1
     repo_activity.append(repo_dict)
 

@@ -25,28 +25,22 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
             <ul>
               <li>{helpers.formatDate(item.created_at)}</li>
               <li className="my-subject">{item.description}</li>
-              <li className="my-text">{item.content}</li>
             </ul>
             <br />
             <ul>
-              {item.files && Array.isArray(item.files) ? (
-                item.files.map((file) => (
-                  <MarkdownComponent key={file.filename} markdownContent={file.content} />
-                ))
-              ) : null}
+                <MarkdownComponent key={item.key} markdownContent={item.content} />
             </ul>
             <br />
-            <ul>
-            {item.activity_type || 'commit'} was made to {item.branch || 'main'}
+            <ul className="my-text">
+            <p>{item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo</p>
             <br />
-            <button onClick={(event) => helpers.htmlToGist(item.html_url)}>
+            <button className="button" onClick={(event) => helpers.htmlToGist(item.html_link)}>
               Check it out on Github
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href={item.html_link} target="_blank" rel="noopener noreferrer">
                 <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="50" height="50" />
               </a>
             </button>
             </ul>
-
           </li>
         ))}
         <br />
