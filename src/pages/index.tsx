@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import PDF from "../images/resume1.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Gists from "../json/gists.json"
 import { Avatar } from "../components/avatar";
 import AvatarData from "../json/avatar.json"
 import InfiniteScrollList from "../components/InfiniteScrollComponent.tsx";
