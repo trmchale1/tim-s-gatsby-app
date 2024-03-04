@@ -4,7 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import MarkdownComponent from "./markdownComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
 
-const InfiniteScrollList = ({ items, getDataFromGists }) => {
+const InfiniteScrollList = ({ items, getDataFromGH }) => {
 
   // Check if 'items' is defined and an array before mapping over it
   if (!items || !Array.isArray(items)) {
@@ -13,7 +13,7 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
   return (
     <InfiniteScroll
       dataLength={items.length}
-      next={getDataFromGists}
+      next={getDataFromGH}
       hasMore={true}
       loader={<p>Loading...</p>}
       endMessage={<p>No more data to load.</p>}
@@ -34,7 +34,7 @@ const InfiniteScrollList = ({ items, getDataFromGists }) => {
             <ul className="my-text">
             <p>{item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo</p>
             <br />
-            <button className="button" onClick={(event) => helpers.htmlToGist(item.html_link)}>
+            <button className="button" onClick={(event) => helpers.htmlTo(item.html_link)}>
               Check it out on Github
               <a href={item.html_link} target="_blank" rel="noopener noreferrer">
                 <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="50" height="50" />
