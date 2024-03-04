@@ -8,6 +8,14 @@ repo_activity = []
 global count
 count = 0
 
+# New Branch -- frontend-styling-2
+
+# Delete commit pushes to make the number of links smaller
+# Add some styling to the commits themselves to make them smaller
+# what happened to date
+# # meta tag twitter card feature
+# comes out weird in safari mobile, fix the mobile experience
+# reverse the sort of the json objects, newest first
 
 def read_gists_into_dict():
     with open('myGists.json') as file:
