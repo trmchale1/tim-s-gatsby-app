@@ -1,7 +1,7 @@
 // utils/helpers.ts
-import Gists from "../json/repo_activity.json";
+import activity from "../json/repo_activity.json";
 
-export const htmlToGist = (link) => {
+export const htmlTo = (link) => {
   window.location.href = link;
 };
 
@@ -35,9 +35,9 @@ export const formatDate = (dateString) => {
   }
 };
 
-export const getDataFromGists = async (setItems) => {
+export const getDataFromGH = async (setItems) => {
   try {
-    const newItems = await Promise.all(Gists.map(fetchDataForItem));
+    const newItems = await Promise.all(activity.map(fetchDataForItem));
     setItems((prevItems) => [...prevItems, ...newItems]);
   } catch (error) {
     console.error("Error fetching data:", error);

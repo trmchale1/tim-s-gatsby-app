@@ -14,7 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    helpers.getDataFromGists(setItems);
+    helpers.getDataFromGH(setItems);
   }, []);
 
   return (
@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="my-name"><p>What I'm doing</p></div>
         <br />
         <div>
-          <InfiniteScrollList items={items} getDataFromGists={helpers.getDataFromGists} />
+          <InfiniteScrollList items={items} getDataFromGH={helpers.getDataFromGH} />
         </div>
         
       </div>
