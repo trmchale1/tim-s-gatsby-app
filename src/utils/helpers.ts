@@ -28,8 +28,10 @@ export const formatDate = (dateString) => {
   try {
     const options = { year: "numeric", month: "long", day: "numeric" };
     const date = new Date(dateString);
+    console.log(date);
     return date.toLocaleDateString(undefined, options);
   } catch (error) {
+
     console.error("Error parsing date:", error);
     return "Invalid Date";
   }

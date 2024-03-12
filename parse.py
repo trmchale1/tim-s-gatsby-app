@@ -10,12 +10,16 @@ count = 0
 
 # New Branch -- frontend-styling-2
 
-# Delete commit pushes to make the number of links smaller
-# Add some styling to the commits themselves to make them smaller
-# what happened to date
+# Delete commit pushes to make the number of links smaller check
+# Add some styling to the commits themselves to make them smaller check
+# add images for each type of commit check
+# what happened to date check
+# reverse the sort of the json objects, newest first check
+
+# New Branch -- frontend-styling-3
+
 # # meta tag twitter card feature
 # comes out weird in safari mobile, fix the mobile experience
-# reverse the sort of the json objects, newest first
 
 
 def read_gists_into_dict():
@@ -72,7 +76,7 @@ def sort_json(filename):
     with open(filename, 'r') as unsorted_file:
         unsorted_data = json.load(unsorted_file)
 
-    sorted_data = sorted(unsorted_data, key=lambda x: x.get('timestamp', ''))
+    sorted_data = sorted(unsorted_data, key=lambda x: x.get('timestamp', ''), reverse=True)
 
     with open(filename, 'w') as sorted_file:
         json.dump(sorted_data, sorted_file, indent=2)
@@ -87,4 +91,3 @@ read_repo_activity_to_dict()
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 sort_json("src/json/repo_activity.json")
-# Unfortunetly after you run this, you have to add key = 3, for each gist, also delete the filename and turn into a list of dicts

