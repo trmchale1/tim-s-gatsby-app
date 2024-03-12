@@ -17,6 +17,7 @@ count = 0
 # comes out weird in safari mobile, fix the mobile experience
 # reverse the sort of the json objects, newest first
 
+
 def read_gists_into_dict():
     with open('myGists.json') as file:
         gist_data = json.load(file)
@@ -55,9 +56,12 @@ def modify_repo_json(repo_obj):
     html_link = "https://github.com/trmchale1/tim-s-gatsby-app/commit/" + repo_obj["after"]
     ref_parts = repo_obj["ref"].split('/')
     branch = ref_parts[-1]
-    repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "tim-s-gatsby-app"})
-    count = count + 1
-    repo_activity.append(repo_dict)
+    if repo_obj["activity_type"] == "push":
+        pass
+    else:
+        repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "tim-s-gatsby-app"})
+        count = count + 1
+        repo_activity.append(repo_dict)
 
 def get_avatar(json):
     avatar_json = {}
@@ -72,6 +76,10 @@ def sort_json(filename):
 
     with open(filename, 'w') as sorted_file:
         json.dump(sorted_data, sorted_file, indent=2)
+        
+def delete_pushes(filename):
+    with open(filename, 'r') as file:
+        data = json.load(file)
         
     
 read_gists_into_dict()    
