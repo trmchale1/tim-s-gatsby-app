@@ -14,8 +14,6 @@ count = 0
 # Add some styling to the commits themselves to make them smaller check
 # add images for each type of commit check
 # what happened to date check
-# # meta tag twitter card feature
-# comes out weird in safari mobile, fix the mobile experience
 # reverse the sort of the json objects, newest first check
 
 # New Branch -- frontend-styling-3
