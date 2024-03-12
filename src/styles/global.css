@@ -53,7 +53,7 @@
 
   .my-text {
     text-align: center;
-    font-family: Optima; 
+    font-family: Roboto; 
     color: #FFFFF0;
     font-size: 1.0rem;
     font-weight: 400;
@@ -113,3 +113,10 @@
     margin: 20px;
   }
 
+.thumbnail {
+  display: inline;
+  vertical-align: middle; /* Align the image vertically with the text */
+  margin-left: 5px;
+  width: 20px; /* Set the width of the image */
+  height: auto;
+}

@@ -3,6 +3,9 @@ import React from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import MarkdownComponent from "./markdownComponent.tsx";
 import * as helpers from '../utils/helpers.ts';
+import push from "../images/cloud-arrow.jpeg"
+import git_thumb from "../images/git_thumb.jpeg"
+
 
 const InfiniteScrollList = ({ items, getDataFromGH }) => {
 
@@ -32,9 +35,11 @@ const InfiniteScrollList = ({ items, getDataFromGH }) => {
         </ul>
         
 
-        <ul className="my-text">
-          <li>{item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo</li>
-        </ul>
+  <ul className="my-text">
+  <li>
+    {item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo <img src={git_thumb} className="thumbnail" />
+  </li>
+</ul>
 
         <button className="button" onClick={(event) => helpers.htmlTo(item.html_link)}>
           Check it out on Github

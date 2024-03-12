@@ -73,7 +73,7 @@ def sort_json(filename):
     with open(filename, 'r') as unsorted_file:
         unsorted_data = json.load(unsorted_file)
 
-    sorted_data = sorted(unsorted_data, key=lambda x: x.get('timestamp', ''))
+    sorted_data = sorted(unsorted_data, key=lambda x: x.get('timestamp', ''), reverse=True)
 
     with open(filename, 'w') as sorted_file:
         json.dump(sorted_data, sorted_file, indent=2)
@@ -88,4 +88,3 @@ read_repo_activity_to_dict()
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 sort_json("src/json/repo_activity.json")
-# Unfortunetly after you run this, you have to add key = 3, for each gist, also delete the filename and turn into a list of dicts
