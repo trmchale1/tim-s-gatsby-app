@@ -10,9 +10,10 @@ count = 0
 
 # New Branch -- frontend-styling-2
 
-# Delete commit pushes to make the number of links smaller
+# Delete commit pushes to make the number of links smaller check
 # Add some styling to the commits themselves to make them smaller
-# what happened to date
+# add images for each type of commit
+# what happened to date check
 # # meta tag twitter card feature
 # comes out weird in safari mobile, fix the mobile experience
 # reverse the sort of the json objects, newest first

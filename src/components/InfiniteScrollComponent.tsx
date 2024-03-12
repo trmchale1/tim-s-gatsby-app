@@ -12,40 +12,41 @@ const InfiniteScrollList = ({ items, getDataFromGH }) => {
   }
   return (
     <InfiniteScroll
-      dataLength={items.length}
-      next={getDataFromGH}
-      hasMore={true}
-      loader={<p>Loading...</p>}
-      endMessage={<p>No more data to load.</p>}
-    >
-      <ul>
+  dataLength={items.length}
+  next={getDataFromGH}
+  hasMore={true}
+  loader={<p>Loading...</p>}
+  endMessage={<p>No more data to load.</p>}
+>
+  <ul>
+    {items.map((item) => (
+      <li key={item.key} className="item-container">
+        <ul>
+          <li className="my-date">{helpers.formatDate(item.timestamp)}</li>
+        
+          <li className="my-subject">{item.description}</li>
+        </ul>
+        
+        <ul>
+            <MarkdownComponent key={item.key} markdownContent={item.content} />
+        </ul>
+        
 
-        {items.map((item) => (
-          <li key={item.key}>
-            <ul>
-              <li>{helpers.formatDate(item.created_at)}</li>
-              <li className="my-subject">{item.description}</li>
-            </ul>
-            <br />
-            <ul>
-                <MarkdownComponent key={item.key} markdownContent={item.content} />
-            </ul>
-            <br />
-            <ul className="my-text">
-            <p>{item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo</p>
-            <br />
-            <button className="button" onClick={(event) => helpers.htmlTo(item.html_link)}>
-              Check it out on Github
-              <a href={item.html_link} target="_blank" rel="noopener noreferrer">
-                <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="50" height="50" />
-              </a>
-            </button>
-            </ul>
-          </li>
-        ))}
-        <br />
-      </ul>
-    </InfiniteScroll>
+        <ul className="my-text">
+          <li>{item.activity_type || 'commit'} was made to {item.branch || 'main'} in the {item.repo || "tim-s-gatsby-app"} repo</li>
+        </ul>
+
+        <button className="button" onClick={(event) => helpers.htmlTo(item.html_link)}>
+          Check it out on Github
+          <a href={item.html_link} target="_blank" rel="noopener noreferrer">
+            <img src="https://octodex.github.com/images/original.png" alt="GitHub" width="50" height="50" />
+          </a>
+        </button>
+      </li>
+    ))}
+    
+  </ul>
+</InfiniteScroll>
   );
 };
 

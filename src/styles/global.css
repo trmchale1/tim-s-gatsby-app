@@ -52,22 +52,34 @@
   }
 
   .my-text {
-    text-align: justify;
+    text-align: center;
     font-family: Optima; 
     color: #FFFFF0;
     font-size: 1.0rem;
     font-weight: 400;
     letter-spacing: 0.025em;
     box-sizing: border-box;
+    margin: 10px;
   }
 
   .my-subject {
-    text-align: left;
+    text-align: center;
     font-family: Optima; 
     color: #FFFFF0;
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.1em;
+    margin: 10px;
+  }
+
+  .my-date {
+    text-align: left;
+    font-family: Optima; 
+    color: #FFFFF0;
+    font-size: 1.0rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 10px;
   }
 
   .button {
@@ -79,7 +91,7 @@
     cursor: pointer;
     text-align: left; /* Align button text to the left */
     vertical-align: left;
-    margin-bottom: 10px;
+    margin: 10px;
   }
 
   .code_block {
@@ -90,11 +102,14 @@
     font-size: 1.0rem;
     font-weight: 400;
     letter-spacing: 0.025em;
-    border-radius: 10px;
-    padding: 10px 20px; /* Adjust padding as needed */
     border: medium;
     font-family: Optima;
-    margin-top: 10px; 
+    margin: 20px;
     overflow-x: auto;
     overflow-wrap: break-word;
   }
+
+  .item-container {
+    margin: 20px;
+  }
+
