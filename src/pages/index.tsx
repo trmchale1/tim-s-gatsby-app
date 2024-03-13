@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import PDF from "../images/resume1.pdf"
+import PDF from "../images/McHale, Tim CV.pdf"
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { Avatar } from "../components/avatar";
 import AvatarData from "../json/avatar.json"
@@ -31,7 +31,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <br></br>
         <p>Check out what I'm doing on <a href="https://twitter.com/mctim123">twitter</a></p>        
         <br></br>
-        <p> <a href={PDF} target="blank">Copy of my resume</a></p>
+        {console.log(PDF)}
+        <p> <a href={PDF}>Copy of my resume</a></p>
         </div>
       </div>
       
