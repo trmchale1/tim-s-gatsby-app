@@ -1,6 +1,46 @@
 [
   {
     "key": 3,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/004826837276e0d705e823a68fc9ea27ac168388",
+    "branch": "rainbowkit-manual-integration",
+    "timestamp": "2024-03-21T18:01:03Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 4,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/490bb1b8c82e0504caea972f09ad5cf1756fe021",
+    "branch": "master",
+    "timestamp": "2024-03-18T15:57:32Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 5,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/254cf8ff0951a0f218535700de812e682a9f8212",
+    "branch": "master",
+    "timestamp": "2024-03-18T15:30:26Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 6,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/1f42142aec093a152cd0c106dc526b45cb891d66",
+    "branch": "merge-rainbow-kit-react-app",
+    "timestamp": "2024-03-18T15:21:43Z",
+    "activity_type": "branch_creation",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 7,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/889928a725b85b71c33c8615c3b1fe6c3a82ce5a",
+    "branch": "master",
+    "timestamp": "2024-03-12T18:34:02Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 8,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/b35c02971c8b0d04ce70501be6556fc0c87cfaf0",
     "branch": "frontend-styling-2",
     "timestamp": "2024-03-12T17:40:59Z",
@@ -15,7 +55,7 @@
     "content": "This is a link to the first release of timmchale.co \n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\nThis is a link to my website \n\ntimchale.co"
   },
   {
-    "key": 4,
+    "key": 9,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/f19695cabe910ce49b2bb5bed41080c42e17bd51",
     "branch": "master",
     "timestamp": "2024-03-03T23:04:59Z",
@@ -23,7 +63,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 5,
+    "key": 10,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/50d7f78d160385e462a1d0b7b7a1758833f20913",
     "branch": "revert-8-revert-7-add-repo-commit-history",
     "timestamp": "2024-03-03T23:04:50Z",
@@ -31,7 +71,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 6,
+    "key": 11,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/a354fef73309ddab4e6e32cbe1154e2a1a460576",
     "branch": "master",
     "timestamp": "2024-03-03T22:58:30Z",
@@ -39,7 +79,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 7,
+    "key": 12,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cfc791ed1ae7f6607164ea1ad7f43e06f47739d6",
     "branch": "revert-7-add-repo-commit-history",
     "timestamp": "2024-03-03T22:58:18Z",
@@ -47,35 +87,11 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 8,
+    "key": 13,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/fea1bd816d63acdfbea523ec9b278b0e4a037034",
     "branch": "master",
     "timestamp": "2024-03-03T22:57:17Z",
     "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 9,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cea675b78306d9ebb7ec67c3252fc6e381d9f763",
-    "branch": "master",
-    "timestamp": "2024-03-01T18:52:49Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 10,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/61f4e213b385671129ce838ffd758b282e15024b",
-    "branch": "frontend-styling-1",
-    "timestamp": "2024-03-01T15:42:05Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 11,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/76581bb4e899596ad07483a19c4aa88aba4008ee",
-    "branch": "add-repo-commit-history",
-    "timestamp": "2024-02-27T23:36:05Z",
-    "activity_type": "branch_creation",
     "repo": "tim-s-gatsby-app"
   },
   {
