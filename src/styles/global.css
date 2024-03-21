@@ -6,6 +6,33 @@
     display: flex;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to the header */
+  z-index: 1000;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: center;
+}
+
+.header_nav_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header_nav_ul_li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between nav items */
+}
+
 .left-side {
     flex: 1;
     height: 100vh;
