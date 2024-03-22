@@ -147,29 +147,3 @@
   width: 20px; /* Set the width of the image */
   height: auto;
 }
-
-.rainbow-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff; /* Text color */
-  background-color: #007bff; /* Bright blue background color */
-  border: none; /* Remove default button border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none; /* Remove underline from button text */
-}
-
-/* Hover effect */
-.rainbow-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Set minimum height to full viewport height */
-}

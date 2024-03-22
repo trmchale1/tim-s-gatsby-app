@@ -18,6 +18,8 @@ const IndexPage: React.FC<PageProps> = () => {
     helpers.getDataFromGH(setItems);
   }, []);
 
+  process.env.REACT_APP_SKIP_POSTCSS = false;
+
   return (
     <Router>
       <div className="split-screen">

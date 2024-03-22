@@ -2,7 +2,7 @@ import React from 'react';
 import {
   getDefaultConfig,
   RainbowKitProvider,
-  midnightTheme,
+  darkTheme,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
 import {
@@ -21,21 +21,24 @@ import {
 
 import MyRainbowButton from "../components/MyRainbowButton.tsx";
 
+import '@rainbow-me/rainbowkit/styles.css';
+
 const config = getDefaultConfig({
   appName: 'Pay_Tim',
   projectId: '9799f339d71ca045685f9c692c428390',
   chains: [mainnet, polygon, optimism, arbitrum, base, goerli, sepolia],
-  ssr: true, // If your dApp uses server side rendering (SSR)
+  ssr: false, // If your dApp uses server side rendering (SSR)
 });
 
 const queryClient = new QueryClient();
 
 const PayTim = ( ) => {
+  process.env.REACT_APP_SKIP_POSTCSS = true;
   return (
     <React.StrictMode>
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider coolMode>
+        <RainbowKitProvider>
           <MyRainbowButton />
         </RainbowKitProvider>
       </QueryClientProvider>
