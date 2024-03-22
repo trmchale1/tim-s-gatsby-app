@@ -48,8 +48,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
     </div>
     <Routes>
-    
-        <Route path="/PayTim/" component={PayTim} />
+        <Route path="/PayTim" component={ PayTim } />
     </Routes>
   </div>
 </Router>
