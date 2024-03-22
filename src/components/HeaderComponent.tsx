@@ -7,9 +7,6 @@ const HeaderComponent = () => {
     <header className="header">
       <nav className="header_nav">
         <ul className="header_nav_ul">
-          <li className="header_nav_ul_li">
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/PayTim/">Pay Tim</Link>
 
