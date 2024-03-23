@@ -33,9 +33,7 @@ const config = getDefaultConfig({
 const queryClient = new QueryClient();
 
 const PayTim = ( ) => {
-  process.env.REACT_APP_SKIP_POSTCSS = true;
   return (
-    <React.StrictMode>
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
@@ -43,7 +41,6 @@ const PayTim = ( ) => {
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
-    </React.StrictMode>
    );
 };
 
