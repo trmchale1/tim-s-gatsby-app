@@ -1,5 +1,52 @@
 [
   {
+    "url": "https://api.github.com/gists/e19daf647046dcb9d50134ee270812c7",
+    "forks_url": "https://api.github.com/gists/e19daf647046dcb9d50134ee270812c7/forks",
+    "commits_url": "https://api.github.com/gists/e19daf647046dcb9d50134ee270812c7/commits",
+    "id": "e19daf647046dcb9d50134ee270812c7",
+    "node_id": "G_kwDOAF1ss9oAIGUxOWRhZjY0NzA0NmRjYjlkNTAxMzRlZTI3MDgxMmM3",
+    "git_pull_url": "https://gist.github.com/e19daf647046dcb9d50134ee270812c7.git",
+    "git_push_url": "https://gist.github.com/e19daf647046dcb9d50134ee270812c7.git",
+    "html_url": "https://gist.github.com/trmchale1/e19daf647046dcb9d50134ee270812c7",
+    "files": {
+      "git_reset_--hard.md": {
+        "filename": "git_reset_--hard.md",
+        "type": "text/markdown",
+        "language": "Markdown",
+        "raw_url": "https://gist.githubusercontent.com/trmchale1/e19daf647046dcb9d50134ee270812c7/raw/72f218d0e274c099944f793d173cc352ca545971/git_reset_--hard.md",
+        "size": 1541
+      }
+    },
+    "public": true,
+    "created_at": "2024-03-24T21:46:28Z",
+    "updated_at": "2024-03-24T21:46:29Z",
+    "description": "git reset --hard",
+    "comments": 0,
+    "user": null,
+    "comments_url": "https://api.github.com/gists/e19daf647046dcb9d50134ee270812c7/comments",
+    "owner": {
+      "login": "trmchale1",
+      "id": 6122675,
+      "node_id": "MDQ6VXNlcjYxMjI2NzU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6122675?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/trmchale1",
+      "html_url": "https://github.com/trmchale1",
+      "followers_url": "https://api.github.com/users/trmchale1/followers",
+      "following_url": "https://api.github.com/users/trmchale1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/trmchale1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/trmchale1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/trmchale1/subscriptions",
+      "organizations_url": "https://api.github.com/users/trmchale1/orgs",
+      "repos_url": "https://api.github.com/users/trmchale1/repos",
+      "events_url": "https://api.github.com/users/trmchale1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/trmchale1/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "truncated": false
+  },
+  {
     "url": "https://api.github.com/gists/e4c10dd319b83e2c043c7e729402de1a",
     "forks_url": "https://api.github.com/gists/e4c10dd319b83e2c043c7e729402de1a/forks",
     "commits_url": "https://api.github.com/gists/e4c10dd319b83e2c043c7e729402de1a/commits",

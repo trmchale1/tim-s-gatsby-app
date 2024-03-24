@@ -1,6 +1,29 @@
 [
   {
-    "key": 3,
+    "key": 0,
+    "html_link": "https://gist.github.com/trmchale1/e19daf647046dcb9d50134ee270812c7",
+    "timestamp": "2024-03-24T21:46:28Z",
+    "description": "git reset --hard",
+    "content": "Today I ran a command I would use rarely, and if it were in a workplace environment, would actually be a pretty big deal.\n\n``` git reset --hard 6894f6e1...```\n\nLike an artist, you have to look at your work and realize that some of it is utter junk and needs to be thrown out. Bad code smells. \n\nIt smells like 1000+ lines of code changes, with changes to configs that indicate potential dependency conflicts.\n\nIn this case I wanted to integrate RainbowKit to my personal website timmchale.co, the css in this new download clashed with my current css and postprocessing.\n\nI spent several days debugging dependency issues and deleting core functionality of the Gatsby app that I started with.\n\nNow I am realizing I built my web-app with Gatsby, which was fine for a one page app with simple html like functionality, but I need to go with Next.js for improved routing functionality.\n\nKeeping code small, with simple workflows consistently works for me. Any time I put too much functionality together, things tend to break.\n\nI used ```git reset``` because I wanted to change where the HEAD was pointing at, this command alters previous history, going back in time, so to speak.\n\nI felt I needed to use reset because the branch I started the dev work in had already been merged with a long history into the main branch. And I wanted that history removed as well.\n\nIn most cases when correcting the mistake of just one commit, you want to use the ```git revert``` command, github's user interface has a good revert feature in the pull request tab."
+  },
+  {
+    "key": 4,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/6894f6e169d51a0e3e2ca28a3fb4fca90eacf3b9",
+    "branch": "master",
+    "timestamp": "2024-03-24T21:16:37Z",
+    "activity_type": "force_push",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 5,
+    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/45b3c63adb54079e54508ce132728f191e6bb02a",
+    "branch": "master",
+    "timestamp": "2024-03-23T19:27:57Z",
+    "activity_type": "pr_merge",
+    "repo": "tim-s-gatsby-app"
+  },
+  {
+    "key": 6,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/004826837276e0d705e823a68fc9ea27ac168388",
     "branch": "rainbowkit-manual-integration",
     "timestamp": "2024-03-21T18:01:03Z",
@@ -8,7 +31,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 4,
+    "key": 7,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/490bb1b8c82e0504caea972f09ad5cf1756fe021",
     "branch": "master",
     "timestamp": "2024-03-18T15:57:32Z",
@@ -16,7 +39,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 5,
+    "key": 8,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/254cf8ff0951a0f218535700de812e682a9f8212",
     "branch": "master",
     "timestamp": "2024-03-18T15:30:26Z",
@@ -24,7 +47,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 6,
+    "key": 9,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/1f42142aec093a152cd0c106dc526b45cb891d66",
     "branch": "merge-rainbow-kit-react-app",
     "timestamp": "2024-03-18T15:21:43Z",
@@ -32,7 +55,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 7,
+    "key": 10,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/889928a725b85b71c33c8615c3b1fe6c3a82ce5a",
     "branch": "master",
     "timestamp": "2024-03-12T18:34:02Z",
@@ -40,7 +63,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 8,
+    "key": 11,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/b35c02971c8b0d04ce70501be6556fc0c87cfaf0",
     "branch": "frontend-styling-2",
     "timestamp": "2024-03-12T17:40:59Z",
@@ -48,61 +71,21 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 0,
+    "key": 1,
     "html_link": "https://gist.github.com/trmchale1/e4c10dd319b83e2c043c7e729402de1a",
     "timestamp": "2024-03-04T01:17:44Z",
     "description": "timmchale.co is now live",
     "content": "This is a link to the first release of timmchale.co \n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\nThis is a link to my website \n\ntimchale.co"
   },
   {
-    "key": 9,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/f19695cabe910ce49b2bb5bed41080c42e17bd51",
-    "branch": "master",
-    "timestamp": "2024-03-03T23:04:59Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 10,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/50d7f78d160385e462a1d0b7b7a1758833f20913",
-    "branch": "revert-8-revert-7-add-repo-commit-history",
-    "timestamp": "2024-03-03T23:04:50Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 11,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/a354fef73309ddab4e6e32cbe1154e2a1a460576",
-    "branch": "master",
-    "timestamp": "2024-03-03T22:58:30Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 12,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/cfc791ed1ae7f6607164ea1ad7f43e06f47739d6",
-    "branch": "revert-7-add-repo-commit-history",
-    "timestamp": "2024-03-03T22:58:18Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 13,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/fea1bd816d63acdfbea523ec9b278b0e4a037034",
-    "branch": "master",
-    "timestamp": "2024-03-03T22:57:17Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 1,
+    "key": 2,
     "html_link": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0",
     "timestamp": "2024-02-21T16:33:32Z",
     "description": "Smart Contract Audit Ethernaut: Fallout",
     "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
   },
   {
-    "key": 2,
+    "key": 3,
     "html_link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
     "timestamp": "2024-02-20T01:27:08Z",
     "description": "Smart Contract Audit Ethernaut: Fallback",
