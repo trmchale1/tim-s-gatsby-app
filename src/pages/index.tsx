@@ -25,11 +25,9 @@ const IndexPage: React.FC<PageProps> = () => {
       <div className="about-me">
         <br></br>
         <br></br>
-        <p>Currently learning React and web3, going deeper into the how the browser works.</p>
+        <p>Currently learning penetration testing, and going deeper into the how the browser works.</p>
         <br></br>
         <p>Code should be concise, while changes in state should have simple, clear workflows.</p>
-        <br></br>
-        <p>Check out what I'm doing on <a href="https://twitter.com/mctim123">twitter</a></p>        
         <br></br>
         {console.log(PDF)}
         <p> <a href={PDF}>Copy of my resume</a></p>
