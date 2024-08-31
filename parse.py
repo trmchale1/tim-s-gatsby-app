@@ -65,12 +65,9 @@ def modify_hacking_repo_json(repo_obj):
     html_link = "https://github.com/trmchale1/hacking/commit/" + repo_obj["after"]
     ref_parts = repo_obj["ref"].split('/')
     branch = ref_parts[-1]
-    if repo_obj["activity_type"] == "push":
-        pass
-    else:
-        repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "hacking"})
-        count = count + 1
-        repo_activity.append(repo_dict)
+    repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "hacking"})
+    count = count + 1
+    repo_activity.append(repo_dict)
 
 def get_avatar(json):
     avatar_json = {}
