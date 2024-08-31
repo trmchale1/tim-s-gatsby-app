@@ -31,6 +31,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <br></br>
         {console.log(PDF)}
         <p> <a href={PDF}>Copy of my resume</a></p>
+        <p>My <a href="https://x.com/TimMcHale11">X</a> account</p>
         </div>
       </div>
       
