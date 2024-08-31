@@ -8,19 +8,6 @@ repo_activity = []
 global count
 count = 0
 
-# New Branch -- frontend-styling-2
-
-# Delete commit pushes to make the number of links smaller check
-# Add some styling to the commits themselves to make them smaller check
-# add images for each type of commit check
-# what happened to date check
-# reverse the sort of the json objects, newest first check
-
-# New Branch -- frontend-styling-3
-
-# # meta tag twitter card feature
-# comes out weird in safari mobile, fix the mobile experience
-
 
 def read_gists_into_dict():
     with open('myGists.json') as file:
@@ -34,8 +21,14 @@ def read_repo_activity_to_dict():
     with open('GatsbyActivity.json') as file:
         repo_data = json.load(file)
         for repo in repo_data:
+            print(repo)
             modify_repo_json(repo)
             
+def read_hacking_repo_activity_to_dict():
+    with open('hackingActivity.json') as file:
+        repo_data = json.load(file)
+        for repo in repo_data:
+            modify_hacking_repo_json(repo)
         
 def print_dict_to_json(py_dict, filename):
     json_obj = json.dumps(py_dict, indent=4)
@@ -66,6 +59,18 @@ def modify_repo_json(repo_obj):
         repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "tim-s-gatsby-app"})
         count = count + 1
         repo_activity.append(repo_dict)
+        
+def modify_hacking_repo_json(repo_obj):
+    global count
+    html_link = "https://github.com/trmchale1/hacking/commit/" + repo_obj["after"]
+    ref_parts = repo_obj["ref"].split('/')
+    branch = ref_parts[-1]
+    if repo_obj["activity_type"] == "push":
+        pass
+    else:
+        repo_dict = dict({"key": count, "html_link": html_link, "branch": branch,"timestamp": repo_obj["timestamp"], "activity_type": repo_obj["activity_type"], "repo" : "hacking"})
+        count = count + 1
+        repo_activity.append(repo_dict)
 
 def get_avatar(json):
     avatar_json = {}
@@ -88,6 +93,7 @@ def delete_pushes(filename):
     
 read_gists_into_dict()    
 read_repo_activity_to_dict()
+read_hacking_repo_activity_to_dict()
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 print_dict_to_json(repo_activity, "src/json/repo_activity.json")
 sort_json("src/json/repo_activity.json")
