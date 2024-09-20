@@ -21,5 +21,4 @@ curl -L \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/repos/trmchale1/hacking/activity > hackingActivity.json
 
-  
 python3 parse.py

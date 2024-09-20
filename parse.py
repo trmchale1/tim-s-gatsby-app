@@ -1,5 +1,5 @@
 import json 
-import requests
+from urllib.request import urlopen
 
 list_of_gist_links = []
 dict_gists_super = {}
@@ -21,7 +21,6 @@ def read_repo_activity_to_dict():
     with open('GatsbyActivity.json') as file:
         repo_data = json.load(file)
         for repo in repo_data:
-            print(repo)
             modify_repo_json(repo)
             
 def read_hacking_repo_activity_to_dict():
@@ -35,15 +34,16 @@ def print_dict_to_json(py_dict, filename):
     with open(filename, "w") as outfile:
         outfile.write(json_obj)
 
-# How do I get content here        
 def modify_gist_json(gist):    
     global count
     raw_url = ""
     for filename in gist["files"]:
         if filename.endswith(".md"):
             raw_url = gist["files"][filename]["raw_url"]
-    response = requests.get(raw_url)
-    gist_dict = dict({"key": count, "html_link" : gist["html_url"], "timestamp" : gist["created_at"], "description" : gist["description"], "content" : response.text})
+    with urlopen(raw_url) as response:
+        content = response.read()
+    text = content.decode("utf-8", "ignore")
+    gist_dict = dict({"key": count, "html_link" : gist["html_url"], "timestamp" : gist["created_at"], "description" : gist["description"], "content" : text})
     count = count + 1
     repo_activity.append(gist_dict)
     
